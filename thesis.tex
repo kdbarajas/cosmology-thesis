@@ -1,0 +1,68 @@
+\documentclass[12pt]{report}
+\usepackage{WUbiblio,WUthesis}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{gensymb}
+\usepackage{hyperref}
+
+\newcommand{\mytilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+
+\begin{document}
+
+\title{Understanding Correlation of Peculiar Velocity Vectors in the Cosmicflows-3 Database}
+\author{Kristian D. Barajas}
+\thesissupervisor{Dr. Rick Watkins}
+
+\maketitle
+
+
+\newpage
+
+\begin{center}
+\textbf{Presentations and publications}
+\item{Senior Seminar Fall 2016 Presentations}
+\end{center}
+
+
+
+\begin{acknowledgments}
+Thanks to everyone!
+\end{acknowledgments}
+
+\begin{abstract}
+My abstract goes here.
+\end{abstract}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+%Chapter 1:
+\include{introduction}
+
+%Chapter 2:
+\include{background}
+
+%Chapter 3:
+\include{theory}
+
+%Chapter 4:
+\include{modeling}
+
+%Chapter 5:
+\include{results}
+
+
+\nocite{*}
+%\bibliographystyle{WUbiblio.sty}
+\bibliographystyle{amsalpha}
+\bibliography{thesisbib.bib}
+
+\appendix
+%\include{notebook}
+
+\end{document}

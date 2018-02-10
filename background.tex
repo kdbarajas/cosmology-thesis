@@ -1,55 +1,56 @@
 \chapter{Background}
 
 
-Understanding the idealized cosmological expansion model, as well as the deviations in motion from it, requires detailed spectroscopic and photometric measurements of galaxies, Cepheid variable stars, and supernovae type Ia. Those measurements, however, are readily available and have been calibrated and expanded by numerous sources. In this section I will provide the precursory background knowledge on how these measurements came about and how they lead to an idealized cosmological expansion model. Then I will show how deviations appear within the model that we can use to trace the large scale motion we are interested in understanding.
-
+In this section I will provide the precursory background knowledge on how spectroscopic and photometric measurements of galaxies, Cepheid variable stars, and supernovae type Ia lead to an idealized cosmological model. Subsequently, I will show how deviations from the model can be used to draw understanding of large scale motion in the universe.
 
 \subsection{Measuring Redshift through Spectroscopy}
 
-Since each atom has a unique spectrum composed of emission and absorption line, astronomers use spectroscopic measurements to determine useful information such as the composition and velocity of astronomical objects. This is accomplished by comparing the position of the spectral lines of hydrogen observed in astronomical objects to those measured in a rest frame where the object is not moving with respect to the Earth. The result is an observed shift towards longer, "redder" wavelengths (see Fig. \ref{fig:redshift}) \cite{SpectralRedshift}. This phenomenon called the redshift is calculated using the Doppler effect, which is a means of measuring the shift in the spectral lines due to motion away from the point of observation:
+
+
+Each atom has a unique spectrum of emission and absorption lines from which astronomers may draw useful information from spectroscopic measurements, such as the composition and velocity of an astronomical object. This is accomplished by comparing the position of the spectral lines of a specified element observed in a given object against those measured in Earth's rest frame. Any measured increase in wavelength against the referrence spectrum appears as a \textit{redshift} towards longer, ``redder" wavelengths, while a measured decrease appears as a \textit{blueshift} towards shorter, ``bluer" wavelengths (see Fig. \ref{fig:redshift}) \cite{SpectralRedshift}. A classic example of this phenomenon is known as the Doppler effect, where a stationary observer experiences a change in pitch when an ambulence (the source of sound waves) approaches producing the effect of a higher frequency and shorter wavelength and then recedes with the converse effect, representing a blueshift and redshift respectively. To a first approximation, we can use the Doppler effect to express observed shifts in spectral lines as follows:
 %
 \begin{equation}\label{ds}
-z \equiv \frac{\lambda_{o}}{\lambda_{r}} -1 = \frac{\Delta \lambda}{\lambda_{r}}
+z \equiv \frac{\lambda_{o}}{\lambda_\text{rest}} -1 = \frac{\Delta \lambda}{\lambda_\text{rest}}
 \end{equation}
 %
-where $z$ is the redshift, $\lambda_{o}$ is the spectral line as observed from the astronomical object, $\lambda_{r}$ is the spectral line as measured at rest on Earth, $\Delta \lambda$ is the shift between $\lambda_{o}$ and $\lambda_{r}$ \cite{Hogg1999:DistanceMeas+GenRef}\cite{moore2012general}. We can relate the redshift to the velocity of the object receding away from us through the relativistic Doppler effect as follows:
-%
-\begin{equation}\label{rds}
-z = \sqrt{\frac{1+v/c}{1-v/c}} - 1
-\end{equation}
-%
-where $v$ is the line-of-sight radial velocity of the object and $c$ is the speed of light \cite{Hogg1999:DistanceMeas+GenRef}\cite{Kirshner2004:HubbleDiagram}\cite{moore2012general}. And, in the limiting case where the radial velocity is much less than the speed of light, the equation reduces to
-%
-\begin{equation}\label{redshift-radialvelo}
-z \approx \frac{v}{c}
-\end{equation}
-%
-which is the relationship used to relate the redshift in the spectral lines to the radial velocity of a galaxy \cite{Hogg1999:DistanceMeas+GenRef}\cite{moore2012general}.
-
+where $z$ is the redshift\footnote{It should be noted that based on our definition a negative redshift is equivalent to an observed blueshift.}, $\lambda_{o}$ is the spectral line as observed from the astronomical object, $\lambda_\text{rest}$ is the spectral line as measured in Earth's rest frame, and $\Delta \lambda$ is the shift between $\lambda_{o}$ and $\lambda_\text{rest}$ \cite{Hogg1999:DistanceMeas+GenRef,moore2012:general}.
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{redshift}
-	\caption{Hydrogen Spectra of Quasi-Stellar Objects (QSO) Exhibiting Redshift \cite{SpectralRedshift}. The first spectrum is an example of a QSO in a theoretical "rest frame" with no motion with respect to Earth. The subsequent spectra are of four different QSOs in order of increasing velocity away from Earth. As velocity increases there is a corresponding increase in redshift $z$ from the rest frame. While the hydrogen lines shift to longer, ``redder" wavelengths, the spacing in the spectral lines remains the same between spectra \cite{SpectralRedshift}.}
+	\caption{Hydrogen Spectra of Quasi-Stellar Objects (QSO) Exhibiting Redshift \cite{SpectralRedshift}. The first spectrum is an example of a QSO in a theoretical "rest frame" with no motion with respect to Earth. The subsequent spectra are of four different QSOs in order of increasing redshift away from Earth. While the hydrogen lines shift to longer, ``redder" wavelengths, the spacing in the spectral lines remains the same between spectra.}
 	\label{fig:redshift}
 \end{figure}
 
+
 \subsection{Measuring Distance through Luminosity}
 
+NEEDS OVERVIEW OF THE STANDARD CANDLE METHOD OF DISTANCE MEASUREMENT
 
-The most precise method of measuring distance to a galaxy is by measuring the luminosity of Type Ia supernovae \cite{Branch1992:SNeIa+StandardCandles}\cite{Goobar1995:StandardCandles}. However, supernova Type Ia are quite rare as they are only known to occur around once every hundred year in a galaxy. The reason that Type Ia supernovae are often sought after and used as standard candles of distance is due to the fact that they only occur when a white dwarf star explodes from accruing mass until it has reached its maximum size of 1.44 solar masses, known as the Chandrasekhar limit. After this point, the star will suddenly explode in a highly predictable manner as a Type Ia supernova \cite{Carroll2001-CosmoReview+SNeIa+Lum}\cite{Krisciunas2005:SNeIa}\cite{Narayan2016:SNeIa+Redshift}. This is because we know that all white dwarfs must overcome a critical mass in order for a supernova to occur; therefore, models have been used to accurately predict the behavior of the explosion based on the principle that nearly all Type Ia supernova begin roughly at the same mass, size, and composition \cite{Goobar1995:StandardCandles}. Using photometry we can measure the apparent magnitude or the brightness as seen on Earth over time, otherwise known as the light curve, of a Type Ia supernova. From the models we can usually accurately predict the luminosity or absolute magnitude of a Type Ia supernova, which is a standard measurement of the brightness of an object as seen from 10 parsecs away \cite{Reiss2007:SNeIa}. Given these measurements we can calculate the luminosity distance $D_L$ of a Type Ia supernova from the distance modulus equation:
+The most precise method of measuring distance to a galaxy is by measuring the luminosity of Type Ia supernovae \cite{Branch1992:SNeIa+StandardCandles,Goobar1995:StandardCandles}. However, supernova Type Ia are quite rare as they are only known to occur around once every one hundred years in a galaxy. The reason that Type Ia supernovae are often sought after and used as standard candles of distance is due to the fact that they only occur when a white dwarf star explodes from accruing mass until it has reached its maximum size of 1.44 solar masses, known as the Chandrasekhar limit. After this point, the star will suddenly explode in a highly predictable manner as a Type Ia supernova \cite{Carroll2001-CosmoReview+SNeIa+Lum,Krisciunas2005:SNeIa,Narayan2016:SNeIa+Redshift}. Because we know that all white dwarfs must overcome a critical mass in order for a supernova to occur, models have been used to accurately predict the behavior of the explosion based on the principle that nearly all Type Ia supernova begin roughly at the same mass, size, and composition \cite{Goobar1995:StandardCandles}. Using photometry we can measure the apparent magnitude or the brightness as seen on Earth over time, otherwise known as the light curve, of a Type Ia supernova. From the models we can usually accurately predict the luminosity or absolute magnitude of a Type Ia supernova, which is a standard measurement of the brightness of an object as seen from 10 parsecs away \cite{Reiss2007:SNeIa}. Given these measurements we can calculate the luminosity distance $D_L$ of a Type Ia supernova from the distance modulus equation:
 %
 \begin{equation}\label{dm}
 m = M + 5 \log [D_L] + K + 25
 \end{equation}
 %
-where $m$ is the apparent magnitude, $M$ is the absolute magnitude, and $K$ is a correction term due to redshifting \cite{Carroll2001-CosmoReview+SNeIa+Lum}\cite{Narayan2016:SNeIa+Redshift}.
-
+where $m$ is the apparent magnitude, $M$ is the absolute magnitude, and $K$ is a correction term due to redshifting \cite{Carroll2001-CosmoReview+SNeIa+Lum,Narayan2016:SNeIa+Redshift}.
 
 
 \subsection{Hubble's Law and Hubble constant}
 
-
+We can then relate the redshift to the velocity of the object receding away from us through the relativistic Doppler effect as follows:
+%
+\begin{equation}\label{rds}
+z = \sqrt{\frac{1+v/c}{1-v/c}} - 1
+\end{equation}
+%
+where $v$ is the line-of-sight radial velocity of the object and $c$ is the speed of light \cite{Hogg1999:DistanceMeas+GenRef,Kirshner2004:HubbleDiagram,moore2012:general}. And, in the limiting case where the radial velocity is much less than the speed of light, the equation reduces to
+%
+\begin{equation}\label{redshift-radialvelo}
+z \approx \frac{v}{c}
+\end{equation}
+%
+which is the relationship used to relate the redshift in the spectral lines to the radial velocity of a galaxy \cite{Hogg1999:DistanceMeas+GenRef,moore2012:general}.
 
 Given measurements of the redshift and distances from Type Ia supernova surveys, astronomers can plot the radial velocity as a function of distance as seen in Fig. \ref{fig:TypeIa} \cite{Kirshner2004:HubbleDiagram}. Again, using the limiting case where the radial velocity $v$ is much less than $c$, we can write the relationship seen in Fig. \ref{fig:TypeIa} as
 %

@@ -7,8 +7,7 @@ eqnos-plus-name: Eq.
 
 ## Doppler Effect
 
-Suppose you are standing on the sidewalk and along the road a parked ambulance turns on its siren. As the ambulance siren blares, it approaches you and you notice that the pitch of the siren seems to have increased such that it sounds higher than it did previously. Then, as the ambulance passes and recedes behind you, another change occurs but now the pitch seems to have decreased such that it sounds much deeper than before. This is a classic example of the phenomenon known as the _Doppler effect_ where a stationary observer experiences a change in frequency due to a moving wave source.  More precisely, the Doppler effect produces an observed shift in the original wave emitted such that an approaching wave source (i.e. the ambulance moving towards the observer) will seemingly appear to have an increase in frequency, meanwhile a receding wave source (i.e. the ambulance moving away from the observer) will appear to have a decrease in frequency. However, it is important to keep in mind that while a shift is observed, in actuality there are no changes to the emitted wave or the wave source itself. The relationship for the _Doppler shifted_ frequency observed is given by the expression:
-
+Suppose you are standing on the sidewalk and along the road a parked ambulance turns on its siren. As the ambulance siren blares, it approaches you and you notice that the pitch of the siren seems to have increased such that it sounds higher than it did previously. Then, as the ambulance passes and recedes behind you another change occurs, but now the pitch seems to have decreased such that it sounds much deeper than before. This is a classic example of the phenomenon known as the _Doppler effect_ where a stationary observer experiences a change in frequency due to a moving wave source.  More precisely, the Doppler effect produces an observed shift in the original wave emitted such that an approaching wave source (i.e. the ambulance moving towards the observer) will seemingly appear to have an increase in frequency, meanwhile a receding wave source (i.e. the ambulance moving away from the observer) will appear to have a decrease in frequency. However, it is important to keep in mind that while a shift is observed, in actuality there are no changes to the emitted wave or the wave source itself. The relationship for the _Doppler shifted_ frequency observed is given by the expression:
 $$
 f_\text{obs} = f_\text{0} \left (\frac{v_\text{wave} + v_\text{receiver}}{v_\text{wave} + v_\text{source}}  \right )
 $$
@@ -48,15 +47,21 @@ where receding sources appear redshifted and approaching sources appear blueshif
 
 - Examples of standard candles include Cepheid variable stars, planetary nebula, Tully-Fisher relation for spiral galaxies, and supernovae amongst others.
 
-- All of these contribute to the cosmic distance ladder, a chain of various methods used to measure different length scales. The foundation of the distance ladder is the geometric effect of measuring nearby astronomical objects called parallax. The parallax measures a distant object by measuring the apparent displacement as the observer changes their position and is described by $d = 1 / p$, where $d$ is the distance in parsecs and $p$ is the parallax angle in arcseconds. 
+- All of these contribute to the cosmic distance ladder, a chain of various methods used to measure different length scales. The foundation of the distance ladder is the geometric effect of measuring nearby astronomical objects called parallax. The parallax uses the apparent displacement of a distant object as the observer changes their position to measure the distance and is described by $d = 1 / p$ (for $p \ll 1\, \text{radian}$), where $d$ is the distance in parsecs and $p$ is the parallax angle in arcseconds. While this method provides some of the most accurate distance measurements, it is limited by the apparent displacement which for large distances becomes difficult to resolve.
 
-- By measuring the apparent brightness of an object and given the luminosity is known, we can define the inverse square law for light as
+- Despite the limitations of the parallax, the accuracy of the method allows astronomers to calibrate other methods---such as Cepheid variable stars---that can measure distances at much greater length scales on the cosmic distance ladder. Cepheid variables are stars that experience a highly predictable change in apparent brightness over time in which the star will undergo a pulsation--a defined period of contraction and expansion. In 2002 the Hubble Space Telescope was able to use the parallax method to determine the most accurate distance measurement to the closest known Cepheid variable star, Delta Cephei. By measuring the apparent brightness and the distance of an astronomical object we can define the inverse square law for light as
   $$
-  \text{distance} = \sqrt{\frac{\text{luminosity}}{4 \pi \cdot (\text{apparent brightness})}}
+  \text{apparent brightness} = \frac{\text{luminosity}}{4 \pi \cdot d^2}
   $$
-  where $d$ is the distance, $L$ is the luminosity, and $b_\text{apparent}$ is the apparent brightness or the flux as measured on Earth of the object. From this equation, we can see that the accuracy of our distance measurements depends on how well we know the object's true luminosity. Thus, determining the most suitable and accurate standard candles is the trickiest aspect of distance measurements as each method introduces some form of uncertainty.
+  where $d$ is the distance, $L$ is the luminosity, and $b_\text{apparent}$ is the apparent brightness or the flux as measured on Earth of the object.
 
-- Cepheid variables 
+- establishing a cosmic benchmark on the ladder. 
+
+- What makes Cepheid variables an important standard candle is that not only does this intrinsic quality holds amongst the class, but more important, from empirical evidence we know that there is a proportionally longer pulsation period the more luminous the Cepheid variable such that we define this as the period--luminosity relationship.
+
+- Thus, by measuring the period of pulsation from the changes in apparent brightness we are able to determine the luminosity.
+
+- From this equation, we can see that the accuracy of our distance measurements depends on how well we know the object's true luminosity. Thus, determining the most suitable and accurate standard candles is the trickiest aspect of distance measurements as each method introduces some form of uncertainty.
 
 - Distance measurements provide the foundation for the structure and evolution of the universe---in other words, the _cosmology_ of our universe.
 

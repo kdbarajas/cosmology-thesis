@@ -49,17 +49,15 @@ where receding sources appear redshifted and approaching sources appear blueshif
 
 - All of these contribute to the cosmic distance ladder, a chain of various methods used to measure different length scales. The foundation of the distance ladder is the geometric effect of measuring nearby astronomical objects called parallax. The parallax uses the apparent displacement of a distant object as the observer changes their position to measure the distance and is described by $d = 1 / p$ (for $p \ll 1\, \text{radian}$), where $d$ is the distance in parsecs and $p$ is the parallax angle in arcseconds. While this method provides some of the most accurate distance measurements, it is limited by the apparent displacement which for large distances becomes difficult to resolve.
 
-- Despite the limitations of the parallax, the accuracy of the method allows astronomers to calibrate other methods---such as Cepheid variable stars---that can measure distances at much greater length scales on the cosmic distance ladder. Cepheid variables are stars that experience a highly predictable change in apparent brightness over time in which the star will undergo a pulsation--a defined period of contraction and expansion. In 2002 the Hubble Space Telescope was able to use the parallax method to determine the most accurate distance measurement to the closest known Cepheid variable star, Delta Cephei. By measuring the apparent brightness and the distance of an astronomical object we can define the inverse square law for light as
+- Despite the limitations of the parallax, the accuracy of the method allows astronomers to calibrate other methods that can measure distances at much greater length scales on the cosmic distance ladder.  For example, in 2002 researchers were able to perform parallax measurements using the Hubble Telescope to determine the most accurate distance measurement to the closest known Cepheid variable star, Delta Cephei. Cepheid variables are stars that experience a highly predictable change in apparent brightness over time (as seen from Earth) during which the star will pulsate--a period of contraction and expansion in which it changes in physical size. Given the apparent brightness and the distance of an astronomical object, in this case Delta Cephei, we can calculate the luminosity (otherwise known as the absolute brightness) through the inverse square law for light:
   $$
   \text{apparent brightness} = \frac{\text{luminosity}}{4 \pi \cdot d^2}
   $$
-  where $d$ is the distance, $L$ is the luminosity, and $b_\text{apparent}$ is the apparent brightness or the flux as measured on Earth of the object.
-
-- establishing a cosmic benchmark on the ladder. 
-
-- What makes Cepheid variables an important standard candle is that not only does this intrinsic quality holds amongst the class, but more important, from empirical evidence we know that there is a proportionally longer pulsation period the more luminous the Cepheid variable such that we define this as the period--luminosity relationship.
+  where $d$ is the distance, $L$ is the luminosity, and $b_\text{app}$ is the apparent brightness as measured on Earth. What makes Cepheid variables an important standard candle is from empirical evidence we know that there is a direct relationship between the period of pulsation and the luminosity of the Cepheid: we call this the period--luminosity relationship.
 
 - Thus, by measuring the period of pulsation from the changes in apparent brightness we are able to determine the luminosity.
+
+- establishing a cosmic benchmark on the ladder. 
 
 - From this equation, we can see that the accuracy of our distance measurements depends on how well we know the object's true luminosity. Thus, determining the most suitable and accurate standard candles is the trickiest aspect of distance measurements as each method introduces some form of uncertainty.
 

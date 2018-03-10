@@ -39,6 +39,8 @@ where we have used the wave velocity relation $c = \lambda \cdot \nu$ to write t
 $$
 z \approx \beta = \frac{v}{c}
 $$
+{#eq:lowvelocity}
+
 where receding sources appear redshifted and approaching sources appear blueshifted relative to an observer.
 
 ## Standard Candles
@@ -81,4 +83,23 @@ where receding sources appear redshifted and approaching sources appear blueshif
 
 ## Hubble's Law
 
-- Distance and redshift measurements were monumental in Hubble's 
+- In the late 1920s using distance and redshift measurements, Edwin Hubble found that a galaxy's relative velocity away from Earth is proportional to the distance between us. The relationship now known as Hubble's law can be expressed as 
+
+- $$
+  v \simeq cz = H_0 d
+  $$
+
+  {#eq:Hubble}
+
+  where we have expressed the relative velocity $v$ in terms of the low-velocity limit from @eq:lowvelocity, $H_0$ is the Hubble constant in \si{\km\per\s\per\Mpc}, and $d$ is the distance to the galaxy in \si{Mpc}. If the redshift observed is interpreted as a Doppler shift
+
+
+- Appeared as though everything around us is moving away. First empirical evidence for the expansion of the Universe.
+
+- ​
+
+- Hubble constant is approximately 70 \si{\km\per\s\per\Mpc}
+
+  ​
+
+![img](https://www.astro.rug.nl/~weygaert/tim1publicpic/dtfe/2dFpanel.dtfe.lres.gif)

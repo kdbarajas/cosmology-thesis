@@ -27,18 +27,20 @@ $$
 $$
 {#eq:reldop}
 
-where $\nu$ is the relativistic notation for frequency (equivalent to $f$ in the classical case) and $\beta$ is the dimensionless ratio $v/c$ of the relative velocity $v$ between the source and the observer ($ v = v_\text{source} - v_\text{rec}$) to the speed of light $c$. Note that $\beta$ is positive when the observer and the source are receding away from each other and negative when the observer and the source are approaching each other---analogous to $v_\text{source}$ in the classical case. The relativistic Doppler effect may seem quite different from our classical case in @eq:classicdop; however, if we Taylor expand about the low-velocity limit (for $v \ll c$) where the relative velocity is much slower than the speed of light we find that $\nu_\text{obs} = \nu_0 \left( 1 - \beta +  \mathcal{O}(\beta^2) \right) $. Using the same low-velocity analysis on @eq:classicaldop, we find that $f_\text{obs} = f_0 \left( 1 - \beta \right)$ such that the relativistic Doppler effect reduces to the classical case for relative velocities much less than the speed of light.
+where $\nu$ is the relativistic notation for frequency (equivalent to $f$ in the classical case) and the dimensionless $\beta = v/c$ is ratio between the relative velocity $ v = v_\text{source} - v_\text{rec}$ to the speed of light $c$. Note that $\beta$ is positive when the observer and the source are receding away from each other and negative when the observer and the source are approaching each other---analogous to $v_\text{source}$ in the classical case. The relativistic Doppler effect may seem quite different from our classical case in @eq:classicdop; however, if we Taylor expand about the low-velocity limit (for $v \ll c$) where the relative velocity is much slower than the speed of light we find that $\nu_\text{obs} = \nu_0 \left( 1 - \beta +  \mathcal{O}(\beta^2) \right) $. Using the same low-velocity analysis on @eq:classicaldop, we find that $f_\text{obs} = f_0 \left( 1 - \beta \right)$ such that the relativistic Doppler effect reduces to the classical case for relative velocities much less than the speed of light.
 
 We will find it useful to define the relativistic Doppler shift in terms of the redshift $z$ of the initial signal as
 $$
-z \equiv \frac{\nu_{0}}{\nu_\text{obs}} - 1 = \frac{\Delta\nu}{\nu_\text{obs}} \equiv \frac{ \lambda_\text{obs}}{\lambda_0} - 1 =  \frac{\Delta\lambda}{\lambda_\text{0}}
+z \equiv \frac{ \lambda_\text{obs}}{\lambda_\text{em}} - 1 =  \frac{\Delta\lambda}{\lambda_\text{em}} = \sqrt{\frac{1 + \beta}{1-\beta}} - 1
 $$
-{#eq:redshift}
+{#eq:redshift} %z \equiv \frac{\nu_{0}}{\nu_\text{obs}} - 1 = \frac{\Delta\nu}{\nu_\text{obs}} \equiv \frac{ \lambda_\text{obs}}{\lambda_0} - 1 =  \frac{\Delta\lambda}{\lambda_\text{0}}
 
-where we have used the wave velocity relation $c = \lambda \cdot \nu$ to write the redshift in terms of the equivalent wavelength and frequency relations. The term redshift is used because it implies that the signal's wavelength has been lengthened, synonymous to longer wavelengths in the visible spectrum corresponds to red light. Likewise, a negative redshift is equivalent to a blueshift, a shortening of the signal's wavelength. From the limiting case for the low-velocity regime where $v \ll c$, using our previous result in @eq:redshift we find that
+where we have used the wave velocity relation $c = \lambda \cdot \nu$ to write the redshift in terms of wavelength. The term redshift is used because it implies that the signal's wavelength has been lengthened, synonymous to longer wavelengths in the visible spectrum corresponds to red light. Likewise, a negative redshift is equivalent to a blueshift, a shortening of the signal's wavelength. From the limiting case for the low-velocity regime where $v \ll c$, using our previous result in @eq:redshift we find that
 $$
-z \approx \beta = \frac{v}{c}
+z \simeq \frac{v}{c}
 $$
+
+
 {#eq:lowvelocity}
 
 where receding sources appear redshifted and approaching sources appear blueshifted relative to an observer.
@@ -91,15 +93,15 @@ where receding sources appear redshifted and approaching sources appear blueshif
 
   {#eq:Hubble}
 
-  where we have expressed the relative velocity $v$ in terms of the low-velocity limit from @eq:lowvelocity, $H_0$ is the Hubble constant in \si{\km\per\s\per\Mpc}, and $d$ is the distance to the galaxy in \si{Mpc}. If the redshift observed is interpreted as a Doppler shift
+  where we have expressed the relative velocity $v$ in terms of the low-velocity limit from @eq:lowvelocity, $H_0$ is the constant of proportionality known as Hubble constant, and $d$ is the galaxy's distance in \si{Mpc}. 
+
+- While the redshift observed on Earth is often interpreted as a Doppler shift due to the method of measurement, this would lead to an incorrect conclusion on the nature of the Universe. That being that if the relative velocity is due to a Doppler redshift, than this would imply that everything in the night sky is receding away from us and that the Earth is located in a privileged place in the Universe. However, this statement is in obvious conflict with the Copernican principle which states that humans are not privileged observers of the Cosmos--that we are not located anywhere special with regards to the Universe around us. 
+
+- Hubble's law implies that galaxies are not just receding away, but that they are doing so at an accelerating rate. 
+
+- First empirical evidence for the expansion of the Universe. Hubble constant currently measured in the range of 67-75 \si{\km\per\s\per\Mpc}\footnote{Add footnote on discrepancies between Planck Satellite and Supernovae Type Ia measurements}
 
 
-- Appeared as though everything around us is moving away. First empirical evidence for the expansion of the Universe.
-
-- ​
-
-- Hubble constant is approximately 70 \si{\km\per\s\per\Mpc}
-
-  ​
+​
 
 ![img](https://www.astro.rug.nl/~weygaert/tim1publicpic/dtfe/2dFpanel.dtfe.lres.gif)

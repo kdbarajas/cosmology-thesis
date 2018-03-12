@@ -93,9 +93,9 @@ where receding sources appear redshifted and approaching sources appear blueshif
 
   {#eq:Hubble}
 
-  where we have expressed the relative velocity $v$ in terms of the low-velocity limit from @eq:lowvelocity, $H_0$ is the constant of proportionality known as Hubble constant, and $d$ is the galaxy's distance in \si{Mpc}. 
+  where we have expressed the relative velocity $v$ in terms of the low-velocity limit from @eq:lowvelocity, $H_0$ is the constant of proportionality known as Hubble constant, and $d$ is the galaxy's distance in \si{Mpc}.
 
-- While the redshift observed on Earth is often interpreted as a Doppler shift due to the method of measurement, this would lead to an incorrect conclusion on the nature of the Universe. That being that if the relative velocity is due to a Doppler redshift, than this would imply that everything in the night sky is receding away from us and that the Earth is located in a privileged place in the Universe. However, this statement is in obvious conflict with the Copernican principle which states that humans are not privileged observers of the Cosmos--that we are not located anywhere special with regards to the Universe around us. 
+- While the redshift observed on Earth is often interpreted as a Doppler shift due to the method of measurement, this would lead to an incorrect conclusion on the nature of the Universe. That being that if the relative velocity is due to a Doppler redshift, than this would imply that everything in the night sky is receding away from us and that the Earth is located in a privileged place in the Universe. However, this statement is in obvious conflict with the Copernican principle which states that humans are not privileged observers of the Cosmos--i.e. that we are not located anywhere special with regards to the Universe around us. The implication of the recessional velocity w
 
 - Hubble's law implies that galaxies are not just receding away, but that they are doing so at an accelerating rate. 
 

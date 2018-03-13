@@ -93,13 +93,11 @@ where receding sources appear redshifted and approaching sources appear blueshif
 
   {#eq:Hubble}
 
-  where we have expressed the relative velocity $v$ in terms of the low-velocity limit from @eq:lowvelocity, $H_0$ is the constant of proportionality known as Hubble constant, and $d$ is the galaxy's distance in \si{Mpc}.
+  where we have expressed the relative velocity $v$ (in \si{km\per\s}) in terms of the low-velocity limit from @eq:lowvelocity, $H_0$ is the constant of proportionality known as the Hubble constant in \si{\km\per\s\per\Mpc}, and $d$ is the galaxy's distance in \si{Mpc}.
 
-- While the redshift observed on Earth is often interpreted as a Doppler shift due to the method of measurement, this would lead to an incorrect conclusion on the nature of the Universe. That being that if the relative velocity is due to a Doppler redshift, than this would imply that everything in the night sky is receding away from us and that the Earth is located in a privileged place in the Universe. However, this statement is in obvious conflict with the Copernican principle which states that humans are not privileged observers of the Cosmos--i.e. that we are not located anywhere special with regards to the Universe around us. The implication of the recessional velocity w
+- While the redshift observed on Earth is often interpreted as a Doppler shift due to the method of measurement, this leads to a troubling interpretation of the Universe. That being that if the relative velocity is due to a Doppler redshift, than this would imply that everything in the night sky is receding away from us and that the Earth is located in a privileged place in the Universe. However, as Hubble amongst others had noticed, this statement is in obvious conflict with the Copernican principle which states that humans are not privileged observers of the Cosmos--i.e. that we are not located anywhere special with regards to the Universe around us. Another possible interpretation that does not require sacrificing the Copernican principle had been proposed independently as part of solutions to Einstein's field equation for general relativity by the Soviet mathematician Alexander Friedmann and the French astronomer Georges Lamaitre: that we reside in an expanding universe and Hubble's law provided the first empirical evidence supporting this theory. Under this interpretation, the relative velocity is not a result of intrinsic motion of galaxies away from us, but rather the result of the space between us stretching.
 
-- Hubble's law implies that galaxies are not just receding away, but that they are doing so at an accelerating rate. 
-
-- First empirical evidence for the expansion of the Universe. Hubble constant currently measured in the range of 67-75 \si{\km\per\s\per\Mpc}\footnote{Add footnote on discrepancies between Planck Satellite and Supernovae Type Ia measurements}
+- Moreover, Hubble's law not only implies that the Universe is expanding, but that it is doing so at an accelerating rate. The Hubble constant is currently measured in the range of 67-75 \si{\km\per\s\per\Mpc}\footnote{Add footnote on discrepancies between Planck Satellite and Supernovae Type Ia measurements}, meaning that every megaparsec of space is being stretched at a rate of approximately 70 \si{km\per\s}.
 
 
 ​

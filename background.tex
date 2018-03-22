@@ -1,124 +1,343 @@
 \chapter{Background}
 
+\section{Background: Observational Cosmology
+Primer}\label{background-observational-cosmology-primer}
 
-In this section I will provide the precursory background knowledge on how spectroscopic and photometric measurements of galaxies, Cepheid variable stars, and supernovae type Ia lead to an idealized cosmological model. Subsequently, I will show how deviations from the model can be used to draw understanding of large scale motion in the universe.
+\subsection{Classical Doppler Effect}\label{classical-doppler-effect}
 
-\subsection{Measuring Redshift through Spectroscopy}
+Suppose you are standing on the sidewalk and along the road a parked
+ambulance turns on its siren. As the ambulance siren blares, it
+approaches you and you notice that the pitch of the siren seems to have
+increased such that it sounds higher than it did previously. Then, as
+the ambulance passes and recedes behind you another change occurs, but
+now the pitch seems to have decreased such that it sounds much deeper
+than before. This is a classic example of the phenomenon known as the
+\emph{Doppler effect} where a stationary observer experiences a change
+in frequency due to a moving wave source. More precisely, the Doppler
+effect produces an observed shift in the original wave emitted such that
+an approaching wave source (i.e.~the ambulance moving towards the
+observer) will seemingly appear to have an increase in frequency,
+meanwhile a receding wave source (i.e.~the ambulance moving away from
+the observer) will appear to have a decrease in frequency. However, it
+is important to keep in mind that while a shift is observed, in
+actuality there are no changes to the emitted wave or the wave source
+itself. The relationship for the \emph{Doppler shifted} frequency
+observed is given by the expression:
 
+\begin{equation}f_\text{obs} = f_\text{em} \left (\frac{v_\text{wave} + v_\text{receiver}}{v_\text{wave} + v_\text{source}}  \right )\label{eq:classicdop}\end{equation}
 
+where \(f_\text{obs}\) describes the observed Doppler shifted frequency,
+\(f_\text{em}\) is the emitted frequency by the wave source,
+\(v_\text{wave}\) is the speed of the emitted wave and is defined by
+wave velocity equation as the wavelength \(\lambda_\text{em}\) times the
+frequency \(f_\text{em}\), \(v_\text{receiver}\) is the velocity of the
+observer receiving the signal (positive when moving towards the source
+and negative in the opposite direction), \(v_\text{source}\) is the
+velocity of the moving wave source emitting the signal (positive when
+receding from the observer and negative in the opposite
+direction)\footnote{As you may have noticed, the relationship results in a constant Doppler shift in the frequency which is not what you would actually observe when an ambulance passes by. The increasing and decreasing in frequency is actually a product of the ambulance passing parallel to the observer which results in a changing angle between the moving wave source and the line of sight between the ambulance and the observer such that $v_{_{LOS}} = v_\text{source} \cdot \text{cos}\ \theta$. However, if the ambulance were to drive directly at the observer, they would would hear a constant increase or decrease in the frequency as is the case in our example.}.
 
-Each atom has a unique spectrum of emission and absorption lines from which astronomers may draw useful information from spectroscopic measurements, such as the composition and velocity of an astronomical object. This is accomplished by comparing the position of the spectral lines of a specified element observed in a given object against those measured in Earth's rest frame. Any measured increase in wavelength against the referrence spectrum appears as a \textit{redshift} towards longer, ``redder" wavelengths, while a measured decrease appears as a \textit{blueshift} towards shorter, ``bluer" wavelengths (see Fig. \ref{fig:redshift}) \cite{SpectralRedshift}. A classic example of this phenomenon is known as the Doppler effect, where a stationary observer experiences a change in pitch when an ambulence (the source of sound waves) approaches producing the effect of a higher frequency and shorter wavelength and then recedes with the converse effect, representing a blueshift and redshift respectively. To a first approximation, we can use the Doppler effect to express observed shifts in spectral lines as follows:
-%
-\begin{equation}\label{ds}
-z \equiv \frac{\lambda_{o}}{\lambda_\text{rest}} -1 = \frac{\Delta \lambda}{\lambda_\text{rest}}
-\end{equation}
-%
-where $z$ is the redshift\footnote{It should be noted that based on our definition a negative redshift is equivalent to an observed blueshift.}, $\lambda_{o}$ is the spectral line as observed from the astronomical object, $\lambda_\text{rest}$ is the spectral line as measured in Earth's rest frame, and $\Delta \lambda$ is the shift between $\lambda_{o}$ and $\lambda_\text{rest}$ \cite{Hogg1999:DistanceMeas+GenRef,moore2012:general}.
+From \xrefname{Eq.}\cref{eq:classicdop}, we can see that for an
+approaching ambulance for which the observer is at rest:
+\(v_\text{receiver} = 0\), \(v_\text{source}\) is negative indicating
+the ambulance is moving towards the observer, and \(v_\text{wave}\) is
+the speed of sound at approximately 343 \(\si{m/s}\). Given these
+conditions, we can write the Doppler effect for sound observed by a
+stationary observer (as in our ambulance example) as
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=\textwidth]{redshift}
-	\caption{Hydrogen Spectra of Quasi-Stellar Objects (QSO) Exhibiting Redshift \cite{SpectralRedshift}. The first spectrum is an example of a QSO in a theoretical "rest frame" with no motion with respect to Earth. The subsequent spectra are of four different QSOs in order of increasing redshift away from Earth. While the hydrogen lines shift to longer, ``redder" wavelengths, the spacing in the spectral lines remains the same between spectra.}
-	\label{fig:redshift}
+\begin{equation}f_\text{obs} = f_\text{em} \left (\frac{1}{1 -v_\text{source} / v_\text{wave}}  \right )\label{eq:ambdop}\end{equation}
+
+where we have simplified the equation in terms of the ratio of the
+source velocity to the speed of the wave.
+
+While the Doppler shifted sound waves experienced by an observer can
+accurately be described by \xrefname{Eq.}\cref{eq:classicdop} and
+\xrefname{Eq.}\cref{eq:ambdop}, this form of the equation is only true
+for wave sources that move much slower than the speed of light. For
+electromagnetic waves (such as visible light) special relativity
+dictates that the relationship must be altered such that Lorentz
+symmetry\footnote{Lorentz symmetry states simply that the laws of physics must uphold in any reference frame.}
+is upheld. Therefore, the relativistic form of the Doppler effect
+becomes
+
+\begin{equation}\nu_\text{obs} = \nu_{em}\ \sqrt{\frac{1- \beta}{1 + \beta}}\label{eq:reldop}\end{equation}
+
+where \(\nu\) is the relativistic notation for frequency (equivalent to
+\(f\) in the classical case) and the dimensionless \(\beta = v/c\) is
+ratio between the relative velocity \( v = v\_\text{source} -
+v\_\text{rec}\) to the speed of light \(c\). Note that \(\beta\) is
+positive when the observer and the source are receding away from each
+other and negative when the observer and the source are approaching each
+other---analogous to \(v_\text{source}\) in the classical case. The
+relativistic Doppler effect may seem quite different from our classical
+case in \xrefname{Eq.}\cref{eq:classicdop}; however, if we Taylor expand
+about the low-velocity limit (for \(v \ll c\)) where the relative
+velocity is much slower than the speed of light we find that
+\(\nu\text{obs} = \nu_\text{em} \left( 1 - \beta +
+\mathcal{O}(\beta\^{}2) \right) \). Using the same low-velocity analysis
+on @eq:classicaldop, we find that
+\(f_\text{obs} = f_\text{em} \left( 1 - \beta \right)\) such that the
+relativistic Doppler effect reduces to the classical case for relative
+velocities much less than the speed of light.
+
+\subsection{Redshift}\label{redshift}
+
+The Doppler effect is particularly useful in astronomy because each
+element has a unique spectrum of emission and absorption lines that will
+appear Doppler shifted by a moving astronomical source. Astronomers may
+draw useful information from Doppler shifts in spectroscopic
+measurements, such as the distance, velocity, and composition of an
+astronomical object. This is accomplished by comparing the position of
+the spectral lines of a specified element against their rest frame
+wavelength. We will find it useful to define the relativistic Doppler
+shift in terms of the redshift \(z\) of the initial signal as
+
+\begin{equation}z \equiv \frac{ \lambda_\text{obs}}{\lambda_\text{em}} - 1 =  \frac{\Delta\lambda}{\lambda_\text{em}} = \sqrt{\frac{1 + \beta}{1-\beta}} - 1\label{eq:redshift}\end{equation}
+
+where we have used the wave velocity relation to rewrite the Doppler
+shift in \xrefname{Eq.}\cref{eq:reldop} in terms of wavelength. The term
+redshift is used because it implies that the signal's wavelength has
+been lengthened, synonymous to longer wavelengths in the visible
+spectrum corresponds to red light. Likewise, a negative redshift is
+equivalent to a blueshift, a shortening of the signal's wavelength. From
+the limiting case for the low-velocity regime where \(v \ll c\), using
+our previous result in \xrefname{Eq.}\cref{eq:redshift} we find that
+
+\begin{equation}z \simeq \frac{v}{c}\label{eq:lowvelocity}\end{equation}
+
+where receding sources appear redshifted and approaching sources appear
+blueshifted relative to an observer.
+
+\subsection{Standard Candles}\label{standard-candles}
+
+A Standard candle is a class of astronomical objects that possess an
+intrinsic quality shared amongst the class, a `standard' so to speak,
+that provides a well known luminosity. Examples of standard candles
+include Cepheid variable stars, planetary nebula, Tully-Fisher relation
+for spiral galaxies, and supernovae amongst others. All of these
+contribute to the cosmic distance ladder, a chain of various techniques
+used to measure different length scales. The foundation of the distance
+ladder is the geometric effect of measuring nearby astronomical objects
+called parallax. The parallax uses the apparent displacement of a
+distant object as the observer changes their position to measure the
+distance and is described by \(d = 1 / p\) (for
+\(p \ll 1\, \text{radian}\)), where \(d\) is the distance in parsecs (1
+parsec \(\simeq\) 3.26 \si{ly}) and \(p\) is the parallax angle in
+arcseconds. While this method provides some of the most accurate
+distance measurements, it is limited by the apparent displacement which
+for large distances becomes difficult to
+resolve\textbackslash{}footnote\{Parallax measurements from ground-based
+telescopes are able to resolve to distances of about 50-100
+\si{\parsec}, while space-based telescopes are able to extend this
+limitation to 200-300 \si{\parsec} within 10\% accuracy.\}.
+
+Despite the limitations of the parallax, the accuracy of the method
+allows astronomers to calibrate other methods that can measure distances
+at much greater length scales on the cosmic distance ladder. Cepheid
+variables are stars that undergo a period of pulsation---a defined
+period of contraction and expansion---during which a change in
+brightness is
+observed\footnote{It should be noted that when we mention brightness we are explicitly referring to the flux of light we measure in \si{\W\per\metre\squared}.}.
+Due to the change in physical size, the absolute brightness or
+\emph{luminosity} of the Cepheid changes such that we observe a change
+in apparent brightness on Earth. What makes Cepheid variables an
+important standard candle is that not only does this intrinsic quality
+holds amongst the class, but more importantly, from empirical evidence
+we know that there is a direct relationship between the period of
+pulsation and the true luminosity of Cepheids: unsurprisingly, we call
+this the \emph{period--luminosity relationship}. Distance measurements
+are normally a challenge to calculate due to the required luminosity as
+defined by the inverse square law for light:
+
+\begin{equation} \text{apparent brightness} = \frac{\text{Luminosity}}{4 \pi \cdot d^2}\label{eq:invsqrlaw}\end{equation}
+
+where \(d\) is the distance, \(L\) is the luminosity, and \(B\) is the
+apparent brightness as measured on Earth. But, by measuring the period
+of pulsation from changes in apparent brightness we are able to
+determine the luminosity and thus measure distance to Cepheids in
+galaxies far greater than the reach of parallax measurements. The
+accuracy of the period--luminosity relationship is dependent, however,
+on standard luminosity measurement to nearby Cepheids in which the
+parallax distance can be used to calibrate the method. For example, in
+2002 the Hubble Space Telescope in partnership with the Hipparchus
+Satellite was able to use the parallax method to determine the most
+accurate distance measurement to the closest known Cepheid variable
+star, Delta Cephei, thus establishing a cosmic benchmark on the ladder
+for other distance methods. The period--luminosity relationship is often
+regarded as the stepping stone by which other methods are compared
+against to improve the accuracy of our distance measurements.
+
+A more common astronomical method of measuring distance analogous to the
+inverse square law of light in \xrefname{Eq.}\cref{eq:invsqrlaw}
+involves the magnitude system, a logarithmic magnitude scale of a
+stellar object's
+brightness\footnote{invented by the Greek astronomer Hipparchus and Ptolemy. Eye sees logarithmically. Makes sense!}.
+Due to the logarithmic nature, the system is fairly counterintuitive
+such that an object brightness are given in `reverse order' whereby
+brighter objects have a negative magnitude while dimmer objects have a
+positive magnitude. We define the apparent magnitude (as seen from
+Earth) as
+
+\begin{equation}m \equiv m_a - m_b = -2.5 \log_{10} \left( \frac{B_a}{B_b} \right)\label{eq:mag}\end{equation}
+
+From \xrefname{Eq.}\cref{eq:mag} it is clear that a change of 1
+magnitude corresponds to a 2.5 decrease in brightness between the
+objects. In order to standardize the relative comparison of magnitudes
+we compare stellar objects to the relative brightness to Vega such that
+objects that are brighter have a negative magnitude and objects that are
+dimmer have a positive
+magnitude\footnote{By this standard, it would naturally follow that Vega has a reference magnitude of 0}.
+Just as in \xrefname{Eq.}\cref{eq:invsqrlaw}, in order to know the
+absolute magnitude we need to know the distance to the stellar object
+and we define this relationship as
+
+\begin{equation}M = m - 2.5 \log_{10} \left[ \left( \frac{d}{10\, \text{pc}} \right)^2 \right] \label{eq:absmag}\end{equation}
+
+The convention used here is to calculate the absolute magnitude as would
+be seen from 10\si{\parsec} away for all objects to standardize the
+method. If we simplify the equation we can rewrite
+\xrefname{Eq.}\cref{eq:absmag} in terms of what we call the
+\emph{distance modulus equation} such that
+
+\begin{equation}m - M = -5 + 5  \log_{10} (d)\label{eq:distmod}\end{equation}
+
+Building off the stepping stone of the Cepheid' period--luminosity
+relationship, we can use the Tully-Fisher relation and Fundamental plane
+to extend the distance ladder to scales on the order of
+1\si{\Gigaparsec}---the length scales of galaxy clusters. The
+Tully-Fisher relation is an empirically driven relationship between the
+rotational velocity of a galaxy and its absolute magnitude. In the
+context of the distance ladder it forms one of the most important
+distance estimators due to its measurement of the 21-centimeter hydrogen
+line, a far infrared line in the microwave spectrum, which is relatively
+unperturbed by objects that normally are opaque to shorter
+wavelengths\footnote{This technique is especially important to physical cosmology for its accurate prediction of the ratio of luminous matter in the galaxy disk to the dark matter halo that surrounds it. For further reading refer to Desmond et al., 2015 on the Tully-Fisher Relation and mass-size relations to halo abundance. https://arxiv.org/abs/1506.00169}.
+Given the 21-centimeter hydrogen line, we can measure the redshift and
+blueshift due to the rotation of a galaxy and estimate the rotational
+velocity of the galaxy. However, given that we need distance estimates
+to measure the luminosity in terms of the absolute magnitude, again we
+can see the distance ladder in effect in that we use Cepheid distance
+measurements from both parallax and period-luminosity relationship
+within individual galaxies to calibrate the distance to the galaxy
+themselves. Subsequently, we can plot the rotational velocity and the
+absolute magnitude of individually calibrated galaxies to show the
+Tully-Fisher relation. Thus, given a rotational velocity from far
+redshift objects we can not only estimate the absolute magnitude, but
+more importantly a distance estimate that otherwise wouldn't be
+possible.
+
+As we have seen, these techniques often overlap in the length scales
+they measure which is important for the calibration of the ladder
+through overlapping distance measurement within individual galaxies
+allowing allowing for multiple classes of distance estimators. Moreover,
+from \xrefname{Eq.}\cref{eq:invsqrlaw} equation, we can see that the
+accuracy of our distance estimates depends on how well we know the
+object's true luminosity is known. Thus, determining the most suitable
+and accurate standard candles is the trickiest aspect of distance
+measurements as each method introduces some form of uncertainty.
+Regardless of the challenges in the method, distance measurements are
+one of the only methods that allow us to probe the cosmos and test our
+theories of the Universe. From this perspective, we see that distance
+measurement truly provide the foundation for understanding the structure
+and evolution of the universe---the \emph{cosmology} of our universe.
+
+\subsection{Hubble's Law}\label{hubbles-law}
+
+In the late 1920s using distance and spectroscopic redshift measurements
+of Cepheid variables, Edwin Hubble found that a galaxy's relative
+velocity away from Earth is proportional to the distance between us. The
+relationship now known as Hubble's law can be expressed as
+
+\begin{equation}v \simeq cz = H_0 d\label{eq:Hubble}\end{equation}
+
+where we have expressed the relative velocity \(v\) (in \si{km\per\s})
+in terms of the low-velocity limit from
+\xrefname{Eq.}\cref{eq:lowvelocity}, \(H_0\) is the proportionality
+constant between the relative velocity and the distance to the object in
+\si{\km\per\s\per\Mpc}, and \(d\) is the distance in \si{Mpc}. The
+proportionality constant \(H_0\) is better known as the Hubble constant,
+but is most usefully written as \(H_0= 100\, h\)\si{\km\per\s\per\Mpc}
+where h is the dimensionless Hubble parameter defined by the current
+accepted value.
+
+While the redshift observed on Earth is often interpreted as a Doppler
+shift due to the method of measurement, this leads to a troubling
+interpretation of the Universe. That being that if the relative velocity
+is due to a Doppler redshift, than this would imply that everything in
+the night sky is receding away from us and that the Earth is located in
+a privileged place in the Universe. However, as Hubble amongst others
+had noticed, this statement is in obvious conflict with the Copernican
+principle which states that humans are not privileged observers of the
+Cosmos--i.e.~that we are not located anywhere special with regards to
+the Universe around us. Another possible interpretation that does not
+require sacrificing the Copernican principle had been proposed
+independently as part of solutions to Einstein's field equation for
+general relativity by the Soviet mathematician Alexander Friedmann and
+the French astronomer Georges Lamaitre: that we reside in an expanding
+universe and Hubble's law provided the first empirical evidence
+supporting this theory. Under this interpretation, the relative velocity
+is not a result of intrinsic motion of galaxies away from us, but rather
+the result of the space between us stretching.
+
+Moreover, Hubble's law not only implies that the Universe is expanding,
+but that it is doing so at an accelerating rate. The Hubble constant is
+currently measured in the range of 67-75
+\si{\km\per\s\per\Mpc}\footnote{Add footnote on discrepancies between Planck Satellite and Supernovae Type Ia measurements},
+meaning that every megaparsec of space is being stretched at a rate of
+approximately 70 \si{km\per\s}.
+
+\begin{figure}
+\centering
+\includegraphics{https://www.astro.rug.nl/~weygaert/tim1publicpic/dtfe/2dFpanel.dtfe.lres.gif}
+\caption{img}
 \end{figure}
 
+\subsection{Peculiar Velocity}\label{peculiar-velocity}
 
-\subsection{Measuring Distance through Luminosity}
+Hubble's law represents an empirical relationship for the expanding
+universe where each galaxy is static with respect to cosmological
+expansion. Given \xrefname{Eq.}\cref{eq:Hubble} we can estimate the
+cosmological redshift \(z_\text{cos}\) due to expansion from
+\(z_\text{cos} \equiv H_0 d/c\). However, an ideal Hubble's law neglects
+gravitational attraction to higher density regions of space which induce
+`peculiar' motion that deviates from cosmological expansion velocity
+\(H_0d\) known as the Hubble flow. The consequence of a continuous
+inflow of matter towards these regions of space is a state of
+over-density known as gravitational collapse, which provides the means
+for the formation and growth of structure in the local Universe. Thus,
+measurements of peculiar velocity are a compelling cosmological probe of
+large scale structure due to being unbiased tracers for the underlying
+density field. We can estimate peculiar velocities as deviations within
+the observed redshift \(z_{obs}\) from Hubble's law as a result of
+Doppler redshift \(z_\text{doppler}\) due to local motion. Unfortunately
+we are observationally limited to receding and approaching wavelengths
+along the 1D line-of-sight component of a galaxy's full 3D peculiar
+velocity vector. Any transverse motion along the line-of-sight is far
+too small to be detected through spectroscopic measurements and thus we
+would also expect any contribution to the line-of-sight to be in the
+form of noise in the signal. Following \xrefname{Eq.}\cref{eq:Hubble},
+at low-redshift where \(v<<c\), the line-of-sight component of the
+peculiar velocity \(v_p\) is given by the familiar form
 
-NEEDS OVERVIEW OF THE STANDARD CANDLE METHOD OF DISTANCE MEASUREMENT
+\begin{equation}v_p \approx cz_\text{obs} - H_0d\label{eq:pecveloapprox}\end{equation}
 
-The most precise method of measuring distance to a galaxy is by measuring the luminosity of Type Ia supernovae \cite{Branch1992:SNeIa+StandardCandles,Goobar1995:StandardCandles}. However, supernova Type Ia are quite rare as they are only known to occur around once every one hundred years in a galaxy. The reason that Type Ia supernovae are often sought after and used as standard candles of distance is due to the fact that they only occur when a white dwarf star explodes from accruing mass until it has reached its maximum size of 1.44 solar masses, known as the Chandrasekhar limit. After this point, the star will suddenly explode in a highly predictable manner as a Type Ia supernova \cite{Carroll2001-CosmoReview+SNeIa+Lum,Krisciunas2005:SNeIa,Narayan2016:SNeIa+Redshift}. Because we know that all white dwarfs must overcome a critical mass in order for a supernova to occur, models have been used to accurately predict the behavior of the explosion based on the principle that nearly all Type Ia supernova begin roughly at the same mass, size, and composition \cite{Goobar1995:StandardCandles}. Using photometry we can measure the apparent magnitude or the brightness as seen on Earth over time, otherwise known as the light curve, of a Type Ia supernova. From the models we can usually accurately predict the luminosity or absolute magnitude of a Type Ia supernova, which is a standard measurement of the brightness of an object as seen from 10 parsecs away \cite{Reiss2007:SNeIa}. Given these measurements we can calculate the luminosity distance $D_L$ of a Type Ia supernova from the distance modulus equation:
-%
-\begin{equation}\label{dm}
-m = M + 5 \log [D_L] + K + 25
-\end{equation}
-%
-where $m$ is the apparent magnitude, $M$ is the absolute magnitude, and $K$ is a correction term due to redshifting \cite{Carroll2001-CosmoReview+SNeIa+Lum,Narayan2016:SNeIa+Redshift}.
-
-
-\subsection{Hubble's Law and Hubble constant}
-
-We can then relate the redshift to the velocity of the object receding away from us through the relativistic Doppler effect as follows:
-%
-\begin{equation}\label{rds}
-z = \sqrt{\frac{1+v/c}{1-v/c}} - 1
-\end{equation}
-%
-where $v$ is the line-of-sight radial velocity of the object and $c$ is the speed of light \cite{Hogg1999:DistanceMeas+GenRef,Kirshner2004:HubbleDiagram,moore2012:general}. And, in the limiting case where the radial velocity is much less than the speed of light, the equation reduces to
-%
-\begin{equation}\label{redshift-radialvelo}
-z \approx \frac{v}{c}
-\end{equation}
-%
-which is the relationship used to relate the redshift in the spectral lines to the radial velocity of a galaxy \cite{Hogg1999:DistanceMeas+GenRef,moore2012:general}.
-
-Given measurements of the redshift and distances from Type Ia supernova surveys, astronomers can plot the radial velocity as a function of distance as seen in Fig. \ref{fig:TypeIa} \cite{Kirshner2004:HubbleDiagram}. Again, using the limiting case where the radial velocity $v$ is much less than $c$, we can write the relationship seen in Fig. \ref{fig:TypeIa} as
-%
-\begin{equation}\label{hubblelaw}
-cz \approx v = H_0 r
-\end{equation}
-%
-where we have chosen to rewrite the luminosity distance $D_L$ as the radial distance $r$ away from us, $z$ is the redshift, and $H_0$ is a proportionality constant between the receding radial velocity and the distance to that object. Eq. \ref{hubblelaw} is known as Hubble's Law, after the astronomer Edwin Hubble who initially discovered this relationship \cite{Kirshner2004:HubbleDiagram}. The proportionality constant $H_0$ is the Hubble constant with units of inverse time, but is most usefully written as
-%
-\begin{equation}\label{hubbleconst}
-H_0 = 100\,h\;\, km\, s^{-1}\, {Mpc} ^{-1}
-\end{equation}
-%
-where $h$ is a dimensionless parameterization constant depending on current measurements. Hubble's Law states that as you increase in distance you have a corresponding increase in radial velocity (and therefore redshift) of the objects observed. The importance of the Hubble constant is that it emphasizes the constant rate of increase in the graph as the rate of change of space (or "stretching") in ${km}/{s}$ per megaparsec of space \cite{Hogg1999:DistanceMeas+GenRef}\cite{Kirshner2004:HubbleDiagram}. This may seem odd, but Eq. \ref{redshift-radialvelo} and Eq. \ref{hubblelaw} state that with increasing radial velocity and distance there is also a corresponding increase in the observed redshift, which is due to further objects having traveled longer through a stretching space. Thus, the Hubble constant $H_0$ measures the current rate of expansion of the universe.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.75\textwidth]{TypeIa}
-	\caption{Hubble Diagram for Type Ia Supernovae  \cite{Kirshner2004:HubbleDiagram}. The linear relationship between velocity and distance is described by Hubble's law, where the slope is the Hubble constant $H_0$ in $km\, s^{-1}\, {Mpc}^{-1}$. The scatter in the distance is associated with a statistical error of $<10\%$ per object measured, with the error increasing with distance. The small red box in the bottom left corner corresponds to the window size of Edwin Hubble's original measurements in 1929.}
-	\label{fig:TypeIa}
-\end{figure}
-
-Efforts to accurately measure the Hubble constant are significantly improved by standard candles like Type 1a supernovae (as seen in Fig. \ref{fig:TypeIa}), but due to their rarity these measurements must be combined with other methods to improve the overall value of $H_0$ \cite{Narayan2016:SNeIa+Redshift}\cite{Riess2016:H0+2.4}\cite{Kaiser2015:PerturbLumDist+PecVelo}\cite{Reiss2007:SNeIa}.  Estimates place bounds on the Hubble parameter $h$ within the range of $0.65$ and $0.8$, while recent progress in measuring $H_0$ by Riess et al. (2016) give an estimate of $73.24\ \pm\ 1.74$ $km s^{-1} Mpc^{-1}$ with a 2.4\% uncertainty in the measurement \cite{Riess2016:H0+2.4}. For challenges and tension in estimating the current Hubble constant I encourage the reader to review Jos\'e Luis Bernala et al. (2016), ``The trouble with $H_0$", for a more comprehensive overview outside the scope of this thesis \cite{Bernal2016:Trouble+H0}.
-
-
-\subsection{Peculiar Velocity}
-
-The relationship described by Hubble's Law in Eq. \ref{hubblelaw} is a model for an idealized isotropic cosmological expansion where galactic objects are stationary with only relative motion due to expansion \cite{Hogg1999:DistanceMeas+GenRef}. From this ideal model you can then estimate the redshift solely due to expansion, known as the cosmological redshift, from $z_{cos}\equiv z={{H_0r}/c}$. This model, however, neglects the intrinsic motion of galaxies due to gravitational attraction and/or residual momentum gained from the Big Bang \cite{Feldman2008}\cite{Watkins2007}. These are seen as fluctuations in the radial velocity about the ideal expansion line in Fig. \ref{fig:TypeIa} as expressed by an ideal Hubble's law. The deviations in the observed redshift from the ideal expansion model are actually measurements of the Doppler redshift due to intrinsic galactic motion \cite{Hogg1999:DistanceMeas+GenRef}\cite{Carroll2001-CosmoReview+SNeIa+Lum}. We can account for the deviations in Hubble's law as an additional velocity term due to the intrinsic motion such that
-%
-\begin{equation}
-cz_{obs} = H_0 r + v_p
-\end{equation}
-%
-where $z_{obs}$ is the observed redshift and $v_p$ is the \textit{peculiar velocity}, where peculiar implies intrinsic or unique to that object. The peculiar velocity $v_p$ of an astronomical object can be calculated from
-%
-\begin{equation}\label{pecvelo-redshift}
-v_p = \frac{c\,(z_{obs} - z_{cos})}{(1+z_{cos})}
-\end{equation}
-%
-where $z_{obs}$ is the observed redshift and $z_{cos}$ is the cosmological redshift \cite{Hogg1999:DistanceMeas+GenRef}. Using the idealized form of Hubble's law from Eq. \ref{hubblelaw} we can include the distance $r$, since $z_{cos}$ is not directly observable, such that Eq. \ref{pecvelo-redshift} can be rewritten as
-%
-\begin{eqnarray}
-v_p = \frac{cz_{obs} - {H_0\, r}}{1+{H_0\, r}/c} \approx \frac{cz_{obs} - H_0\, r}{1+z_{obs}}
-\end{eqnarray}
-%
-where we have made the (reasonable) assumption that $v_p \ll H_0 r$ such that $z_{obs} \approx z_{cos}$. \cite{Watkins2015:BulkFlow+CF2}\cite{Watkins2015:UnbiasedEstimator}.
-However, Eq. \ref{pecvelo-redshift} is a useful tool for visualizing how we discriminate between cosmological redshift and the Doppler redshift in peculiar velocity calculations.
-
-
-
-\subsection{Cosmic scales}
-
-
-An important limitation on Hubble's law from Eq. \ref{redshift-radialvelo} states that the radial velocity must be much less than the speed of light. Since the radial velocity is the sum of the cosmological expansion $H_0\, r$ and the peculiar velocity $v_p$, this places a few limitations on the quantities we can calculate. This is because we know that the radial velocity is proportional to the redshift in the spectra of a distant object, and thus if the observed redshift becomes too large then the approximation held by Eq. \ref{redshift-radialvelo} is no longer valid. Such calculations at high redshifts using this method thus inherently introduce distortions in the radial velocity, with estimates placing the limit on the redshift at $z < 2$ before corrections are needed \cite{Kaiser2015:PerturbLumDist+PecVelo}. Since radial velocity is also proportional to the distance of an object, the same reasoning can be used to set limits on the distance. Fortunately, in this thesis we will be working with scales well within the boundaries of $v \ll c$ and $z < 2$. I define these scales below explicitly in terms of distance and size.
-
-
-
-On very small scales, on the order of magnitude of individual galaxies ($\mytilde 10\ kpc$) the motion due to cosmic expansion is small compared to the peculiar motion. At this scale, the motion that dominates is due to gravitational attraction pulling objects towards regions of higher density. Even at small scales of the size of clusters ($\mytilde 5\; h^{-1}\, Mpc$), motion towards regions of higher density dominate such that peculiar motion of a cluster tends to be on the same scale as the cosmic expansion. At the larger scales that we are interested in ($\mytilde 100\; h^{-1}\, Mpc$), you can think of the Earth as being at the center of an immense sphere with a multitude of clusters and individual galaxies moving around with their own peculiar velocities. At this scale, the motion is almost entirely dominated by the cosmic expansion with the sphere having a very small peculiar motion (a sum of all the motion within the sphere) known as the bulk flow \cite{Feldman2008}\cite{Watkins2015:BulkFlow+CF2}. The bulk flow provides us with great insight into the origin and evolution of our universe through the directionality and motion \cite{Watkins2007}\cite{Watkins2009:LCDM+Challenge}\cite{Macaulay21092012}. In thesis we will be concerning ourselves with radial and peculiar velocity measurements relative to these scales.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{CF3}
-	\caption{Distances of Individual Galaxies in the \textit{Cosmicflows-3} (CF3) Database Projected on Supergalactic SGX-SGY planes  \cite{Tully2016:cf3}. Upper right: distances from the precursor \textit{Cosmicflows-2} compendium in black \cite{Tully2013:cf2}, Bottom Left: distances from Six Degree Field Galaxy Survey (6dFGS) of the Fundamental Plane in orange, Bottom Right: distances from the Splitzer Space Telescope infrared measurements of galaxy rotation in green. Upper left: all galaxies from different measurement surveys included in CF3 projected on one plane as well as distance measurements from Type 1a supernovae in red.}
-	\label{fig:CF3}
-\end{figure}
-
-
-\subsection{\textit{Cosmicflows-3} Database}
-
-
-For our study of peculiar velocities we will be using distance measurements from the \textit{Cosmicflows-3} (CF3) compendium, which is a collection of various observational surveys of 17,669 individual galaxies (see Fig. \ref{fig:CF3}) \cite{Tully2016:cf3}. Each galaxy distance is measured and calibrated amongst different sources and surveys such as Type Ia supernovae observations, infrared photometry of galaxy rotation,  Cepheid variables photometry, and estimating the tip of the red giant branch. The galaxies are organized into groups of similar distances; for example, the Virgo Cluster, the largest group, consists of 161 individual galaxy measurements. The compendium provides 11,508 groups organized in this manner, but nearly every group contain less than ten galaxies and 9804 groups are denoted as "singles" due to containing only one galaxy. Despite the limited amount of groups with more than two galaxies, this is a significant improvement to its predecessor \textit{Cosmicflows-2} which contained only 8,188 individual galaxy entries in total \cite{Tully2013:cf2}. The distances (and the observed redshift) provided by \textit{Cosmicflows-3} allows us to calculate the peculiar velocity for both individual galaxies as well as groups.
+where \(c\) is the speed of light, \(z_\text{obs}\) is the observed
+redshift, and \(H_0d\) is the cosmological expansion velocity at a given
+comoving distance
+\(d\)\footnote{Comoving distance refers to the real distance between two objects at rest with respect to the Hubble flow. In simpler terms, comoving distance is the physical distance between two objects in the absence of cosmic expansion.}\footnote{Davis et al shows that due to redshift not being an additive property this crude approximation is only accurate for $z_\text{obs} << 0.1$, but for the introductory purposes of this section we find this form more than sufficient. We will revisit this equation in Section 2.#}.
+Therefore given a distance indicator, the comoving distance \(d\) can be
+measured independently from the observed redshift \(z_\text{obs}\)
+allowing us to estimate the peculiar velocity. The most common form of
+distance indicators are the various standard candles introduced in Sec
+1.\# which unfortunately suffer from large uncertainties. In contrast to
+the high accuracy redshift measurements available, the uncertainty on
+distance estimators can be upwards of \(\simeq 20\%\) which can lead to
+uncertainties in the peculiar velocity measurement on the order of the
+velocity itself. Typical peculiar velocity measurement are expected to
+be of order \(300\) \si{\km\per\s} while the errors scale largely with
+the distance of the galaxy such that uncertainty \(\delta_{v_p}\) can be
+approximated by \(\delta_{v_p} \approx 0.20 H_0 d\). Given the large
+uncertaintites, pecular velocity measurements must be estimated through
+statistical means thus requiring large velocity surveys with both
+distance and redshift
+measurements\footnote{In Section 2.# we will discuss an estimator method developed by Watkins & Feldman that provides a more accurate method of statistically estimating peculiar velocities.}.

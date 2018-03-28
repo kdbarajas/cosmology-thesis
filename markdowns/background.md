@@ -3,7 +3,7 @@ eqnos-cleveref: On
 eqnos-plus-name: Eq.
 ...
 
-# Observational Cosmology Primer
+# A Primer to the Observable Universe
 
 ## Doppler Effect
 
@@ -91,7 +91,7 @@ In the late 1920s using distance and spectroscopic redshift measurements of Ceph
 
 $$v \simeq cz = H_0 d$$ {#eq:Hubble}
 
-\noindent where we have expressed the relative velocity $v$ (in \si{km/s}) in terms of the low-velocity limit from @eq:lowvelocity, $H_0$ is the proportionality constant between the relative velocity and the distance to the object in \si{\km\per\s\per\Mpc}, and $d$ is the distance in megaparsecs (\SI{e6}{\parsec} $=$ \SI{1}{\Mpc}). The proportionality constant $H_0$ is better known as the Hubble constant, but is most usefully written as $H_0= 100\, h\,$\si{\km\per\s\per\Mpc} where $h$ is the dimensionless Hubble parameter defined by the current accepted value.
+\noindent where we have expressed the relative velocity $v$ (in \si{km/s}) in terms of the low-velocity limit from @eq:lowvelocity, $H_0$ is the proportionality constant between the relative velocity and the distance to the object in \si{\km\per\s\per\Mpc}, and $d$ is the distance in megaparsecs (\SI{1}{\Mpc} $=$ \SI{e6}{\parsec} $\equiv$ \SI{3.26}{\Mega\lightyear}). The proportionality constant $H_0$ is better known as the Hubble constant, but is most usefully written as $H_0= 100\, h\,$\si{\km\per\s\per\Mpc} where $h$ is the dimensionless Hubble parameter defined by the current accepted value.
 
 ![img](https://cdn-images-1.medium.com/max/1000/1*ZmaIxrEA2RsueTvaGMOg3Q.jpeg)
 
@@ -99,18 +99,14 @@ While the redshift observed on Earth is often interpreted as a Doppler shift due
 
 
 
-Moreover, Hubble's law not only implies that the Universe is expanding, but that it is doing so at an accelerating rate. The Hubble constant is currently measured in the range of \SI{67-75}{\km\per\s\per\Mpc}\footnote{Add footnote on discrepancies between Planck Satellite and Supernovae Type Ia measurements}, meaning that every megaparsec of space is being stretched at a rate of approximately \SI{70}{\km\per\s}.
+Moreover, Hubble's law not only implies that the Universe is expanding, but that it is doing so at an accelerating rate. The Hubble constant is currently measured in the range of \SI{67-75}{\km\per\s\per\Mpc}\footnote{Add footnote on discrepancies between Planck Satellite and Supernovae Type Ia measurements}, meaning that every megaparsec of space is being stretched at a rate of approximately \SI{70}{\km\per\s} . If we assume the total matter in the Universe is conserved, then by running the linear expansion proposed by Hubble's law in reverse we are led to the interesting conclusion that the Universe we observe today is far less dense than in the past. In fact, the inverse Hubble constant\footnote{Hubble's constant can be written in terms of inverse time such that $H_0 \approx$\SI{70}{\km\per\s\per\Mpc}=\SI{2.27e-18}{\per\s}} represents the Hubble time $t_H = H_0^{-1}\approx$\SI{14}{\G\yr} when all the matter in the Universe that is currently observed today coincided in an infinitely dense primordial state prior to the onset of cosmological expansion. We now know that the history of the Universe is far more complicated than the picture given by the linear Hubble's law, but the general interpretations are valid: the primordial Universe existed in an infinitely dense state when at $t_H \approx t_0 =$ \SI{13.8}{\G\yr} the Universe began expanding in what is known as the _Big Bang_.
 
 
 
 ![img](https://www.astro.rug.nl/~weygaert/tim1publicpic/dtfe/2dFpanel.dtfe.lres.gif)
 
-## Peculiar Velocity
+### Cosmic Microwave Background
 
-Hubble's law represents an empirical relationship for the expanding universe where each galaxy is static with respect to cosmological expansion. Given @eq:Hubble we can estimate the cosmological redshift $z_\text{cos}$ due to expansion from $z_\text{cos} \equiv H_0 d/c$. However, an ideal Hubble's law neglects gravitational attraction to higher density regions of space which induce 'peculiar' motion that deviates from cosmological expansion velocity $H_0d$ (also known as the Hubble flow). The consequence of a continuous inflow of matter towards these regions of space is a state of over-density known as gravitational collapse, which provides the means for the formation and growth of structure in the local Universe. Thus, measurements of peculiar velocity are a compelling cosmological probe of local structure due to the motion of galaxies tracing the underlying density field. 
-
-We can estimate peculiar velocities as deviations within the observed redshift $z_{obs}$ from Hubble's law as a result of Doppler redshift $z_\text{doppler}$ due to local motion. Unfortunately we are observationally limited to receding and approaching wavelengths along the 1D line-of-sight component of a galaxy's full 3D peculiar velocity vector. Any transverse motion along the line-of-sight is far too small to be detected through spectroscopic measurements and thus we would also expect any contribution to the line-of-sight to be in the form of noise in the signal. Following @eq:Hubble, at low-redshift where $v \ll c$, the line-of-sight component of the peculiar velocity $v_p$ is given by the familiar form
-
-$$v_p \approx cz_\text{obs} - H_0d$$ {#eq:pecveloapprox}
-
-\noindent where $c$ is the speed of light, $z_\text{obs}$ is the observed redshift, and $H_0d$ is the cosmological expansion velocity at a given comoving distance\footnote{Comoving distance refers to the real distance between two objects at rest with respect to the Hubble flow. In simpler terms, comoving distance is the physical distance between two objects in the absence of cosmic expansion.} $d$\footnote{Davis et al shows that due to redshift not being an additive property this crude approximation is only accurate for $z_\text{obs} << 0.1$, but for the introductory purposes of this section we find this form more than sufficient. We will revisit this equation in Section 2.#}. Therefore given a distance indicator, the comoving distance $d$ can be measured independently from the observed redshift $z_\text{obs}$ allowing us to estimate the peculiar velocity. The most common form of distance indicators are the various standard candles introduced in Sec 1.# which unfortunately suffer from large uncertainties. In contrast to the high accuracy redshift measurements available, the uncertainty on distance estimators can be upwards of $\simeq 20\%$ which can lead to uncertainties in the peculiar velocity measurement on the order of the velocity itself. Typical peculiar velocity measurement are expected to be of order \SI{300}{km/s} while the errors scale largely with the distance of the galaxy such that uncertainty $\delta_{v_p}$ can be approximated by $\delta_{v_p} \approx 0.20 H_0 d$. Given the large uncertainties, peculiar velocity measurements must be estimated through statistical means thus requiring large velocity surveys with both distance and redshift measurements\footnote{In Section 2.# we will discuss an estimator method developed by Watkins & Feldman that provides a more accurate method of statistically estimating peculiar velocities.}.
+- Universe is Isotropic
+- Universe is Homogenous
+- Recipe of the Cosmos

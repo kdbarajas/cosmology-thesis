@@ -107,11 +107,12 @@ Moreover, Hubble's law not only implies that the Universe is expanding, but that
 
 ### Cosmic Microwave Background
 
-- What is the CMB:
-  - The cosmic microwave background (CMB) are microwave photons emitted uniformly across the night sky in all directions.
-  - These photons maintain a blackbody spectrum characterized by a temperature of 2.726 \si{\K}
-- Universe is Isotropic
-
-
+- Hot Big Bang Cosmology
+  - The Big Bang theory provides the best framework for the very early Universe as we understand today from which we can model the formation and evolution of the Universe through time. After the initial Big Bang, the early Universe existed in a hot, infinitely dense state from which the temperature extreme inhibited the stable combination of free particles into even neutral hydrogen atoms. Instead, for approximately \SI{380,000}{\y}, the free charged particles interacted strongly with photons resulting in an opaque plasma from which no light escaped. However, during this time the Universe continued to expand and cool until the time of recombination (at a temperature of about \SI{3000}{\K}) when neutral hydrogen atoms could stably form resulting in a transparent hydrogen gas. With a lower temperature and fewer charged particles to interact with, photons decoupled from ionized atoms were no longer scattered off electrons and were able to escape the gas and free-stream the forming Universe undisturbed. The remnants of the time of last scatter are observed today as the cosmic microwave background (CMB), microwave photons emitted uniformly across the night sky in all directions.
+- Universe is Isotropic:
+  - After correcting for local motion due to our solar system and galaxy, the microwave photons were found to maintain a blackbody spectrum characterized by a temperature of \SI{$2.726$ ($\pm 0.0013$)}{\K} (from \SI{3000}{K} as a result of high-redshifting due to cosmological expansion) with fluctuations on the order of milliKelvin. The minute fluctuations relative to the characteristic temperature of the primordial plasma lends reason to the density of the early Universe (at the time of recombination) being extremely isotropic. Isotropy implies that if matter is conserved then density measurements of the known Universe would show a uniform matter density regardless of angle of observation. Indeed, by analyzing the density of the CMB and comparing with known neutral hydrogen and helium density from nucleosynthesis measurements today we are able to confirm that matter is conserved strongly suggesting isotropy.
 - Universe is Homogenous
+  - While the Universe is isotropic, there are no conditions in the CMB that directly imply that the Universe must be homogeneous. A homogeneous Universe would imply that observations of the Universe would appear the same independent of location. While cosmological expansion and the Copernican principle allowed us to deduce that it is very unlikely that we are located at the center of the Universe where galaxies are receding away from us, the conclusion still must be verified independently.
+
+
 - Recipe of the Cosmos

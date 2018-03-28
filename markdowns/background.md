@@ -107,6 +107,11 @@ Moreover, Hubble's law not only implies that the Universe is expanding, but that
 
 ### Cosmic Microwave Background
 
+- What is the CMB:
+  - The cosmic microwave background (CMB) are microwave photons emitted uniformly across the night sky in all directions.
+  - These photons maintain a blackbody spectrum characterized by a temperature of 2.726 \si{\K}
 - Universe is Isotropic
+
+
 - Universe is Homogenous
 - Recipe of the Cosmos

@@ -95,7 +95,7 @@ $$v \simeq cz = H_0 d$$ {#eq:Hubble}
 
 ![img](https://cdn-images-1.medium.com/max/1000/1*ZmaIxrEA2RsueTvaGMOg3Q.jpeg)
 
-While the redshift observed on Earth is often interpreted as a Doppler shift due to the method of measurement, this leads to a troubling interpretation of the Universe. That being that if the relative velocity is due to a Doppler redshift, than this would imply that everything in the night sky is receding away from us and that the Earth is located in a privileged place in the Universe. However, as Hubble amongst others had noticed, this statement is in obvious conflict with the Copernican principle which states that humans are not privileged observers of the Cosmos---i.e. that we are not located anywhere special with regards to the Universe around us. Another possible interpretation that does not require sacrificing the Copernican principle had been proposed independently as part of solutions to Einstein's field equation for general relativity by the Soviet mathematician Alexander Friedmann and the French astronomer Georges Lamaitre: that we reside in an expanding universe and Hubble's law provided the first empirical evidence supporting this theory. Under this interpretation, the relative velocity is not a result of intrinsic motion of galaxies away from us, but rather the result of the space between us stretching.
+While the redshift observed on Earth is often interpreted as a Doppler shift due to the method of measurement, this leads to a troubling interpretation of the Universe. That being that if the relative velocity is due to a Doppler redshift, than this would imply that everything in the night sky is receding away from us and that the Earth is located in a privileged place in the Universe. However, as Hubble amongst others had noticed, this statement is in obvious conflict with the Copernican principle which states that humans are not privileged observers of the Cosmos---i.e. that we are not located anywhere special with regards to the Universe around us. Another possible interpretation that does not require sacrificing the Copernican principle had been proposed independently as part of a solution of Einstein's field equations of general relativity by the Soviet mathematician Alexander Friedmann and the French astronomer Georges Lamaitre: that we reside in an expanding universe and Hubble's law provided the first empirical evidence supporting this theory. Under this interpretation, the relative velocity is not a result of intrinsic motion of galaxies away from us, but rather the result of the space between us stretching. The solution of Einstein's field equations supported by Hubble's discovery is known as Friedmann-Lemaitre-Robertson-Walker (FLRW) metric from which the standard model of modern cosmology was born.
 
 
 
@@ -109,14 +109,32 @@ Moreover, Hubble's law not only implies that the Universe is expanding, but that
 
 - Hot Big Bang Cosmology
   - The Big Bang theory provides the best framework for the very early Universe as we understand today from which we can model the formation and evolution of the Universe through time. After the initial Big Bang, the early Universe existed in a hot, infinitely dense state from which the temperature extreme inhibited the stable combination of free particles into even neutral hydrogen atoms. Instead, for approximately \SI{380,000}{\y}, the free charged particles interacted strongly with photons resulting in an opaque plasma from which no light escaped. However, during this time the Universe continued to expand and cool until the time of recombination (at a temperature of about \SI{3000}{\K}) when neutral hydrogen atoms could stably form resulting in a transparent hydrogen gas. With a lower temperature and fewer charged particles to interact with, photons decoupled from ionized atoms were no longer scattered off electrons and were able to escape the gas and free-stream the forming Universe undisturbed. The remnants of the time of last scatter are observed today as the cosmic microwave background (CMB), microwave photons emitted uniformly across the night sky in all directions.
+
 - Universe is Isotropic:
   - After correcting for local motion due to our solar system and galaxy, the microwave photons were found to maintain a blackbody spectrum characterized by a temperature of \SI{$2.726$ ($\pm 0.0013$)}{\K} (from \SI{3000}{K} as a result of high-redshifting due to cosmological expansion) with fluctuations on the order of milliKelvin. The minute fluctuations relative to the characteristic temperature of the primordial plasma lends reason to the density of the early Universe (at the time of recombination) being extremely isotropic. Isotropy implies that if matter is conserved then density measurements of the known Universe would show a uniform matter density regardless of angle of observation. Indeed, by analyzing the density of the CMB and comparing with known neutral hydrogen and helium density from nucleosynthesis measurements today we are able to confirm that matter is conserved strongly suggesting isotropy.
+
 - Universe is Homogenous
   - While the Universe is isotropic, there are no conditions in the CMB that directly imply that the Universe must be homogeneous. A homogeneous Universe would imply that observations of the Universe would appear the same independent of location. While cosmological expansion and the Copernican principle allowed us to deduce that it is very unlikely that we are located at the center of the Universe where galaxies are receding away from us, the conclusion still must be verified independently. Recently, various large-scale surveys, such as the 2dF galaxy survey, have been undertaken to map galaxy distributions via redshift measurements. Figure ## shows galaxy distribution data from the 2dF galaxy survey which can provide insight into the homogeneity of the Universe. On local scales of $z \lesssim 0.05$, if we were to closely analyze the galaxy distributions we would see variations in structure that seem to diverge from an isotropic image of the Universe. However, on larger scales out to $z \approx 0.15$ we see that the distribution of galaxies become very homogeneous with very little distinction between positions in redshift space. Thus, on the largest scales we find that the Universe is both isotropic and homogeneous otherwise known as the _Cosmological Principle_.
 
+  ![2015_SMICA_CMB](../images/2015_SMICA_CMB.png)
+
+  ![2015_TTSpectrum](../images/2015_TTSpectrum.png)
+
 
 - Recipe of the Cosmos
+
+  - While the CMB provides us with a strong argument for a homogeneous and isotropic Universe, arguably the most important cosmological information comes in the form of the tiny milliKelvin anisotropies from recent measurements by the Planck Satellite, shown in Figure #. We can decompose Figure # by the magnitude of the temperature fluctuations $\mathcal{D}^{T}​$ as a function of the multipole moment $l​$, where the angular scale or "wavelength" of the fluctuations $\lambda = \frac{2\pi}{l}​$ is determined by the number of modes $l​$ within a given angle on the night sky. To understand the relative contribution of each mode $l​$ to the fluctuations seen in the CMB we must quantify the amplitude of the fluctuations on a given scale known as the _power spectrum_. More generally, the power spectrum describes the power $\mathcal{P}​$ on a given scale $n​$ through the square of the Fourier amplitude $a_n​$ such that $\mathcal{P}(n) \propto  |a_n|^2 = C_n​$. The angular power spectrum $\mathcal{D_l^{TT}}​$ of the CMB is described as
+
+  - $$
+    \mathcal{D}_l^{TT} \equiv |\mathcal{D}^{T}|^2 \; l(l+1) / 2\pi = C_l \; l(l+1) / 2\pi
+    $$
+
+    where $l(l +1)/2\pi$ accounts for the 2D field of view of the night sky. Figure # shows the resulting CMB angular power spectrum as a function of the multipole moment $l$ with the best fit line given by the $\Lambda\text{CDM}$ model, a cosmological model based of FLRW metric. 
+
   - Ordinary Matter
+
   - Radiation
+
   - Dark Matter
+
   - Dark Energy

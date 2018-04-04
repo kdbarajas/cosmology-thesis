@@ -121,7 +121,7 @@ Moreover, Hubble's law not only implies that the Universe is expanding, but that
   ![2015_TTSpectrum](../images/2015_TTSpectrum.png)
 
 
-- Recipe of the Cosmos
+- Recipe for the Cosmos
 
   - While the CMB provides us with a strong argument for a homogeneous and isotropic Universe, arguably the most important cosmological information comes in the form of the tiny milliKelvin anisotropies from recent measurements by the Planck Satellite, shown in Figure #. We can decompose Figure # by the magnitude of the temperature fluctuations $\mathcal{D}^{T}​$ as a function of the multipole moment $l​$, where the angular scale or "wavelength" of the fluctuations $\lambda = \frac{2\pi}{l}​$ is determined by the number of modes $l​$ within a given angle on the night sky. To understand the relative contribution of each mode $l​$ to the fluctuations seen in the CMB we must quantify the amplitude of the fluctuations on a given scale known as the _power spectrum_. More generally, the power spectrum describes the power $\mathcal{P}​$ on a given scale $n​$ through the square of the Fourier amplitude $a_n​$ such that $\mathcal{P}(n) \propto  |a_n|^2 = C_n​$. The angular power spectrum $\mathcal{D_l^{TT}}​$ of the CMB is described as
 
@@ -129,12 +129,24 @@ Moreover, Hubble's law not only implies that the Universe is expanding, but that
     \mathcal{D}_l^{TT} \equiv |\mathcal{D}^{T}|^2 \; l(l+1) / 2\pi = C_l \; l(l+1) / 2\pi
     $$
 
-    where $l(l +1)/2\pi$ accounts for the 2D field of view of the night sky. Figure # shows the resulting CMB angular power spectrum as a function of the multipole moment $l$ with the best fit line given by the $\Lambda\text{CDM}$ model, a cosmological model based of FLRW metric. 
+    where $l(l +1)/2\pi$ accounts for the 2D field of view of the night sky. Figure # shows the resulting CMB angular power spectrum as a function of the multipole moment $l$ with the best fit line given by the $\Lambda\text{CDM}$ model, the standard cosmological model based on the FLRW metric. 
+
+  - We can define a density parameter $\Omega$ which describes ratio of the observed density $\rho$ of any form of relativistic or non-relativistic matter and energy in the Universe to the critical density $\rho_c$. The critical density is a predicted value given by the FLRW metric which determines the spatial geometry and fate of our Universe. As seen in Figure #, the CMB angular power spectrum places strong constraints on the parameters that describe the $\Lambda\text{CDM}$ model giving us a value for the total mass-energy density of $\Omega_0 \simeq  1$\footnote{For those who are curious, $\Omega_0 = 1$ implies a Universe with flat spatial geometry. And, while highly fascinating, the mathematics and physics describing the geometry and fate of the Universe is unfortunately beyond the scope of this thesis. For further inquiry please refer to any intermediate or advance graduate level cosmology text.}, where we use the subscript $0$ to indicate the value at present time. Given that the total mass-energy density $\Omega_0$ is essentially at unity with the critical density, we can list the ingredients that form our Universe in terms of their fractional density contribution as calculated from the $\Lambda\text{CDM}$ model of cosmology.
 
   - Ordinary Matter
 
-  - Radiation
+    - Ordinary matter, also known as visible matter, is any form of matter that interacts with and emits electromagnetic radiation and is primarily found within galaxies.  The visible Universe is almost entirely composed of baryonic matter, such as protons and neutrons, and electrons. The current value for the baryonic density parameter $\Omega_b$ is $0.0486 \pm 0.0010$ or about $4.86\%$ of the total density of the Universe. Given the principle of conservation of charge, we would expect that the number density of electrons to be about that of baryons. However, baryons by nature are far more massive than electrons and thus we find the mass-energy density contribution of electrons to be negligible given the small contribution of baryonic matter to the total density.
+
+  - Relativistic Particles
+
+    - The most common relativistic particles that compose our Universe are that of electromagnetic radiation and neutrinos. In our Universe today, the majority of radiation is in the form of the uniform photon gas observed in the CMB with very little contribution from visible light from stars and other sources. The radiation density $\Omega_\gamma$ as measured today provides a negligible contribution on the order of $8 \cdot 10^{-5}$ or approximately $0.002\%$ of the total mass-energy in the Universe.
 
   - Dark Matter
 
+    - Up to this point, the density of all the matter and particles we are comfortably familiar contributes less than $5\%$ to the total mass-energy density in the known Universe. For decades cosmologist have grappled with the idea that there may be more matter in the Universe than what we can observe. This unknown form of matter has been observed to be gravitationally bound but lacking any known form of interaction with electromagnetic radiation thus appearing 'dark' compared to ordinary matter. While we know very little about this invisible dark matter, the best fitting $\Lambda\text{CDM}$ model provides us with a density contribution of dark matter $\Omega_c$ of $0.2589 \pm 0.00574$ meaning that it composes roughly $26\%$ of the known Universe. The model also suggests that it is probably composed of an undiscovered particle that is both massive and non-relativistic leading to the term _cold dark matter_ or CDM in the $\Lambda\text{CDM}$ model. We can define the total matter density parameter $\Omega_m$ as the sum of the ordinary and dark matter such that $$\Omega_m = \Omega_b + \Omega_c = 0.3089 \pm 0.0062$$ as observed in today's Universe.  
+
   - Dark Energy
+
+    - The total matter contribution to the overall density is only about $31\%$ leaving a sizable gap in the density makeup. The accelerating expansion of the Universe as observed by the most recent measurements of Hubble's law
+    - Accerlerating universe
+    - Turns out that Einstein's field equations predict that expansion should be slowing down. However, it turns out that if a vacuum energy exists in the Universe than it is possible for the expansion of the Universe to be accelerating. Under this assumption, then the effective energy density contribution to the overa  

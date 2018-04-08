@@ -10,7 +10,7 @@ eqnos-plus-name: Eq.
 
 - Using spacetime coordinates $(ct, x, y, z)$ to describe events.
 
-  - where we define separation between two events by the line segment $ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2 \equiv \eta_{\mu\nu}dx^\mu dy^\nu​$, an invariant quantity under coordinate transformation\footnote{This means that from any inertial frame of reference, an observer would measure the same separation $ds​$.}
+  - where we define separation between two events by the line segment $ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2 \equiv \eta_{\mu\nu}dx^\mu dy^\nu$, an invariant quantity under coordinate transformation\footnote{This means that from any inertial frame of reference, an observer would measure the same separation $ds$.}
 
 -  ​
 
@@ -28,9 +28,13 @@ $$
 
   ​
 
+The proportionality constant $H_0$ is better known as the Hubble constant, but is most usefully written as $H_0= 100\, h\,$\si{\km\per\s\per\Mpc} where $h$ is the dimensionless Hubble parameter defined by the current accepted value.
+
+
+
 ## Peculiar Velocity
 
-Hubble's law represents an empirical relationship for the expanding universe where each galaxy is static with respect to cosmological expansion. Given @eq:Hubble we can estimate the cosmological redshift $z_\text{cos}$ due to expansion from $z_\text{cos} \equiv H_0 d/c$. However, an ideal Hubble's law neglects gravitational attraction to higher density regions of space which induce 'peculiar' motion that deviates from cosmological expansion velocity $H_0d$ (also known as the Hubble flow). The consequence of a continuous inflow of matter towards these regions of space is a state of over-density known as gravitational collapse, which provides the means for the formation and growth of structure in the local Universe. Thus, measurements of peculiar velocity are a compelling cosmological probe of local structure due to the motion of galaxies tracing the underlying density field. 
+Hubble's law represents an empirical relationship for the expanding universe where each galaxy is static with respect to cosmological expansion. Given @eq:Hubble we can estimate the cosmological redshift $z_\text{cos}$ due to expansion from $z_\text{cos} \equiv H_0 d/c$. However, an ideal Hubble's law neglects gravitational attraction to higher density regions of space which induce 'peculiar' motion that deviates from cosmological expansion velocity $H_0d$ (also known as the Hubble flow). The consequence of a continuous inflow of matter towards these regions of space is a state of over-density known as gravitational collapse, which provides the means for the formation and growth of structure in the local Universe. Thus, measurements of peculiar velocity are a compelling cosmological probe of local structure due to the motion of galaxies tracing the underlying matter density field.
 
 We can estimate peculiar velocities as deviations within the observed redshift $z_{obs}$ from Hubble's law as a result of Doppler redshift $z_\text{doppler}$ due to local motion. Unfortunately we are observationally limited to receding and approaching wavelengths along the 1D line-of-sight component of a galaxy's full 3D peculiar velocity vector. Any transverse motion along the line-of-sight is far too small to be detected through spectroscopic measurements and thus we would also expect any contribution to the line-of-sight to be in the form of noise in the signal. Following @eq:Hubble, at low-redshift where $v \ll c$, the line-of-sight component of the peculiar velocity $v_p$ is given by the familiar form
 

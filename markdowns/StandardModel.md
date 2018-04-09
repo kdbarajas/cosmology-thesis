@@ -4,13 +4,52 @@ eqnos-cleveref: On
 eqnos-plus-name: Eq.
 ...
 
-# Large Scale Structure Formation
+# Modern Cosmology & Large Scale Structure Formation
 
- 
+## General Relativity & Einstein's Field Equations
+
+- General relativity can be seen as the generalization of Newtonian gravity to a relativistic spacetime geometry.
+
+- Using spacetime coordinates $(ct, x, y, z)$ to describe events.
+
+  - where we define separation between two events by the line segment $ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2 \equiv g_{\mu\nu}dx^\mu dx^\nu$, an invariant quantity under coordinate transformation\footnote{This means that from any inertial frame of reference, an observer would measure the same separation $ds$.}
+
+- Einstein's Field Equations:
+
+- $$
+  G^{\mu\nu} = \frac{8\pi G}{c^4} \left( T^{\mu\nu} + T_{\text{vac}}^{\mu\nu} \right) = \frac{8\pi G}{c^4} T_{\text{all}}^{\mu\nu}
+  $$
+
+  - Left side represents a second-rank tensor that describes the curvature of spacetime.
+
+  - Right side represents the stress-energy tensor $T_{\text{all}}^{\mu\nu}$ for the total matter and energy in the Universe. The first term represents the stress-energy $T^{\mu\nu}$ for a perfect fluid associated with a homogeneous and isotropic Universe. The second term represents the stress-energy for a vacuum that acts a repulsive pressure that counteracts gravitational attraction,
+
+  - $$
+    T_{\text{vac}}^{\mu\nu} = - \frac{\Lambda c^4}{8\pi G} g^{\mu\nu}
+    $$
+
+    where $\Lambda$ represents the cosmological constant providing the best account for dark energy in the $\Lambda\text{CDM}$ model.
+
+## Friedmann-Lemaitre-Robertson-Walker Metric 
+
+- The FLRW metric for a homogeneous and isotropic Universe is given by
+
+- $$
+  ds^2 = -c^2dt^2 + a(t)^2 dl^2
+  $$
+
+  - where $a(t)$ represents the scale factor and the line segment $l$ describes the comoving distance over any 3-dimensional coordinate space.
+
+- Written in spherical coordinates, the FLRW metric takes the form
+
+- $$
+  ds^2 = -c^2dt^2 + (a(t)\, R_0)^2 \left[  d\chi^2 + S_\kappa(\chi)^2 \,  d\Omega^2   \right]
+  $$
+
+  - where $r$ represents the comoving distance coordinate independent of Hubble flow, $S_\kappa(\chi)$ describes the geometry of the Universe depending on the curvature $\kappa$.
+  - related to the proper distance 
 
 ## Peculiar Velocity
-
-While the cosmological principle of homogeneity appears to be consistent on large scales, When the local Universe is observed, the total matter distribution appears to cluster due to gravitational attraction
 
 Hubble's law represents an empirical relationship for the expanding universe where each galaxy is static with respect to cosmological expansion. However, an ideal Hubble's law neglects gravitational attraction to higher density regions of space which induce 'peculiar' motion that deviates from cosmological expansion velocity $c z_\text{cos} = H_0d$ (also known as the Hubble flow). The consequence of a continuous inflow of matter towards these regions of space is a state of matter over-density known as gravitational collapse, which provides the means for the formation and growth of structure in the local Universe. 
 
@@ -26,17 +65,12 @@ $$v_p \approx cz_\text{obs} - H_0d$$ {#eq:pecveloapprox}
 
 
 
-- What is general relativity
-
-- Using spacetime coordinates $(ct, x, y, z)$ to describe events.
-
-  - where we define separation between two events by the line segment $ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2 \equiv \eta_{\mu\nu}dx^\mu dy^\nu$, an invariant quantity under coordinate transformation\footnote{This means that from any inertial frame of reference, an observer would measure the same separation $ds$.}
-
--  ​
+- ​
 
   ### For next section on cosmology
 
   ​
+
 
 $$
 v_p \equiv \textbf{\textit{v}} \cdot \textbf{\hat{r}} = c \left ( \frac{z\text{obs} - z\text{cos}}{1 + z_\text{cos}}  \right)

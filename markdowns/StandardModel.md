@@ -38,7 +38,7 @@ eqnos-plus-name: Eq.
   ds^2 = -c^2dt^2 + a(t)^2 dl^2
   $$
 
-  - where $a(t)$ represents the scale factor and the line segment $l$ describes the comoving distance over any 3-dimensional coordinate space.
+  - where $a(t)$ represents the scale factor and the line segment $l$ describes the comoving distance independent of Hubble flow over any 3-dimensional coordinate space.
 
 - Written in spherical coordinates, the FLRW metric takes the form
 
@@ -48,7 +48,7 @@ eqnos-plus-name: Eq.
 
   - where $R(t)$ is the time-dependent radius of the Universe, $\chi$ is a dimensionless radial coordinate, and $d\Omega$ is the spherical coordinate space corresponding to $d\theta^2 + \sin^2 \! \theta \, d\phi^2$.
 
-  - The radius $R(t)$ is related to the scale factor by $R(t) \equiv R_0 a(t)$ with a radius of curvature $R_0 = (\sqrt{|K|})^{-1}$ where $K$ is the curvature constant.  The comoving distance $d_c$ is a measure of distance independent of Hubble flow and can be related to the dimensionless comoving coordinate $\chi$ by $d_c = R_0 \chi$. While, the 'true' distance $D$, otherwise known as the proper distance, would be given by $D = a(t) \, d_c$. The geometry of the Universe $S_\kappa(\chi)$ depends on the curvature $K$ such that
+  - The radius $R(t)$ is related to the scale factor by $R(t) \equiv R_0 a(t)$ with a radius of curvature $R_0 = (\sqrt{|K|})^{-1}$ where $K$ is the curvature constant.  The physical comoving distance $d_c$ can be related to the dimensionless comoving coordinate $\chi$ by $d_c = R_0 \chi$. While, the 'true' distance $D$, otherwise known as the proper distance, depends on the scale factor and would be given by $D = a(t) \, d_c$. The geometry of the Universe $S_\kappa(\chi)$ depends on the curvature $K$ such that
     $$
     S_K(\chi) =
     \begin{cases}
@@ -59,6 +59,8 @@ eqnos-plus-name: Eq.
     $$
 
   - Observations from the CMB amongst others strongly support a infinitely flat Universe such that $K \simeq 0$ and $R \to \infin$.
+
+- While 
 
 ## Peculiar Velocity
 

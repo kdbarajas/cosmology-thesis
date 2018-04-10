@@ -43,11 +43,22 @@ eqnos-plus-name: Eq.
 - Written in spherical coordinates, the FLRW metric takes the form
 
 - $$
-  ds^2 = -c^2dt^2 + (a(t)\, R_0)^2 \left[  d\chi^2 + S_\kappa(\chi)^2 \,  d\Omega^2   \right]
+  ds^2 = -c^2dt^2 + R(t)^2 \left[  d\chi^2 + S_K(\chi)^2 \,  d\Omega^2   \right]
   $$
 
-  - where $r$ represents the comoving distance coordinate independent of Hubble flow, $S_\kappa(\chi)$ describes the geometry of the Universe depending on the curvature $\kappa$.
-  - related to the proper distance 
+  - where $R(t)$ is the time-dependent radius of the Universe, $\chi$ is a dimensionless radial coordinate, and $d\Omega$ is the spherical coordinate space corresponding to $d\theta^2 + \sin^2 \! \theta \, d\phi^2$.
+
+  - The radius $R(t)$ is related to the scale factor by $R(t) \equiv R_0 a(t)$ with a radius of curvature $R_0 = (\sqrt{|K|})^{-1}$ where $K$ is the curvature constant.  The comoving distance $d_c$ is a measure of distance independent of Hubble flow and can be related to the dimensionless comoving coordinate $\chi$ by $d_c = R_0 \chi$. While, the 'true' distance $D$, otherwise known as the proper distance, would be given by $D = a(t) \, d_c$. The geometry of the Universe $S_\kappa(\chi)$ depends on the curvature $K$ such that
+    $$
+    S_K(\chi) =
+    \begin{cases}
+    \sin^2 \! \chi & \text{if } \ K = +1 \hspace{5mm} \text{ (open `spherical' universe),}\\
+    \chi & \text{if } \ K = 0 \hspace{9mm}  \text{ (flat universe)},\\
+    \sinh^2 \! \chi & \text{if } \ K = -1 \hspace{5mm} \text{ (closed `hyperbolic' universe).}
+    \end{cases}
+    $$
+
+  - Observations from the CMB amongst others strongly support a infinitely flat Universe such that $K \simeq 0$ and $R \to \infin$.
 
 ## Peculiar Velocity
 

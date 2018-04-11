@@ -30,17 +30,17 @@ eqnos-plus-name: Eq.
 
     where $\Lambda$ represents the cosmological constant providing the best account for dark energy in the $\Lambda\text{CDM}$ model.
 
-## Friedmann-Lemaitre-Robertson-Walker Metric 
+## Friedmann-Lemaitre-Robertson-Walker Metric
 
 - The FLRW metric for a homogeneous and isotropic Universe is given by
 
 - $$
-  ds^2 = -c^2dt^2 + a(t)^2 dl^2
+  ds^2 = -c^2dt^2 + a(t)^2 dr^2
   $$
 
-  - where $a(t)$ represents the scale factor and the line segment $l$ describes the comoving distance independent of Hubble flow over any 3-dimensional coordinate space.
+  - where $a(t)$ represents the scale factor and the distance $r$ describes the comoving radial distance between two galaxies independent of cosmic expansion over any 3-dimensional coordinate space.
 
-- Written in spherical coordinates, the FLRW metric takes the form
+- The FLRW metric takes the standard form in hyperspherical coordinates
 
 - $$
   ds^2 = -c^2dt^2 + R(t)^2 \left[  d\chi^2 + S_K(\chi)^2 \,  d\Omega^2   \right]
@@ -48,19 +48,95 @@ eqnos-plus-name: Eq.
 
   - where $R(t)$ is the time-dependent radius of the Universe, $\chi$ is a dimensionless radial coordinate, and $d\Omega$ is the spherical coordinate space corresponding to $d\theta^2 + \sin^2 \! \theta \, d\phi^2$.
 
-  - The radius $R(t)$ is related to the scale factor by $R(t) \equiv R_0 a(t)$ with a radius of curvature $R_0 = (\sqrt{|K|})^{-1}$ where $K$ is the curvature constant.  The physical comoving distance $d_c$ can be related to the dimensionless comoving coordinate $\chi$ by $d_c = R_0 \chi$. While, the 'true' distance $D$, otherwise known as the proper distance, depends on the scale factor and would be given by $D = a(t) \, d_c$. The geometry of the Universe $S_\kappa(\chi)$ depends on the curvature $K$ such that
+  - The radius $R(t)$ is related to the scale factor by $R(t) \equiv R_0 \, a(t)$ with a radius of curvature $R_0 = (\sqrt{|K|})^{-1}$ where $K$ is the curvature constant.  The physical comoving distance coordinate $\bar{r}$ can be related to the dimensionless comoving angular coordinate $\chi$ by $\bar{r} = R_0 \chi$. The geometry of the Universe $S_\kappa(\chi)$ depends on the curvature $K$ such that
     $$
     S_K(\chi) =
     \begin{cases}
-    \sin^2 \! \chi & \text{if } \ K = +1 \hspace{5mm} \text{ (open `spherical' universe),}\\
-    \chi & \text{if } \ K = 0 \hspace{9mm}  \text{ (flat universe)},\\
-    \sinh^2 \! \chi & \text{if } \ K = -1 \hspace{5mm} \text{ (closed `hyperbolic' universe).}
+    \sin^2 \! \chi & \text{for } \ K > 0 \hspace{5mm} \text{ (open `spherical' universe),}\\
+    \chi & \text{for } \ K = 0 \hspace{5mm}  \text{ (flat universe)},\\
+    \sinh^2 \! \chi & \text{for } \ K < 0 \hspace{5mm} \text{ (closed `hyperbolic' universe).}
     \end{cases}
     $$
 
-  - Observations from the CMB amongst others strongly support a infinitely flat Universe such that $K \simeq 0$ and $R \to \infin$.
+  - Observations from the CMB amongst others strongly support a infinitely flat Universe such that $K \simeq 0$ and $R \to \infty$.
 
-- While 
+  ### Hubble Flow
+
+- As before, the comoving distance coordinate $\bar{r}$ describes the distance between two galaxies independent of cosmic expansion. The 'true' physical distance $d$, otherwise known as the proper distance, is the physical separation an observer at rest with respect to cosmic expansion would observe a distant galaxy and is dependent on the scale factor such that  $d(t) = a(t) \, \bar{r}$. The cosmic expansion velocity $v$ (more commonly known as the Hubble flow) can therefore be deduced from the rate of change of the separation distance such that
+
+  - $$
+    v \equiv \dot d = \frac{\dot a}{a} \, d = H(t) \, d
+    $$
+
+
+  {#eq:expansionvelo}
+
+  where
+  $$
+  H(t) \equiv \frac{\dot a}{a}
+  $$
+  {#eq:hubbleparam}
+
+  represents the time-dependent Hubble parameter. At present, $H$ is known as the Hubble constant $H_0$ and is defined by $H_0 \equiv \dot a_0 / a_0 = \dot a_0$ (normalized to $a_0 =1$ at present-time). In practice, the value of the Hubble constant is most usefully written as $H_0= 100\, h\,$\si{\km\per\s\per\Mpc} in terms of the dimensionless parameter $h$ defined by the current accepted value. 
+
+- #### Cosmic Redshift
+
+  - In practice, the only meaningful way in which we can measure the cosmological expansion velocity is by measuring the redshift.
+
+  $$
+  v /c \simeq z_\text{cos} = \frac{\dot a \, \Delta t}{a} = H_0 d /c
+  $$
+
+  where
+  $$
+  z_\text{cos} = \frac{\lambda_\text{obs} - \lambda_\text{em}}{\lambda_\text{em}} = \frac{a_0}{a(t_\text{em})}-1
+  $$
+  is the cosmological redshift, 
+
+- In the low-velocity limit, we can approximate @eq:expansionvelo as Hubble's law by Taylor expanding about $a_0$ such that $a_0 - a(t_\text{em}) \simeq 1 - \dot a_0 \, \Delta t$ is a linear approximation of the rate of change of the scale factor with $\Delta t = t_\text{rec} - t_\text{em}$.
+
+-  and $H_0 d$ is the expansion velocity at present-time.
+
+  ### Friedmann Equation
+
+- Solving the EFEs using the FLRW metric provides the Friedman equation that model the time-evolution of a homogeneous and isotropic Universe:
+  $$
+  H^2 \equiv \left( \frac{\dot a}{a} \right)^2 = \frac{8\pi G}{3} \rho_\text{tot} - \frac{K c^2}{a^2}
+  $$
+
+  - {#friedmann} where $\rho_\text{tot} \equiv \rho_m + \rho_r + \rho_\Lambda $ the total energy density due to the energy density of matter $\rho_m$, radiation $\rho_r$, and dark energy $\rho_\Lambda$.
+
+
+- We can define the _critical density_ $\rho_\text{crit}$ from the Friedmann equation as
+
+- $$
+  \rho_\text{crit} = \frac{3 H^2}{8\pi G}
+  $$
+
+  which when compared to the total density $\rho_\text{total}$ determines the type of spatial curvature of the Universe. If the total density equals the critical density than $K$ must be zero and the Universe has a flat spatial geometry. While if the total density is less than the critical density than $K$ is negative implying a spherical geometry and if greater than the critical density than $K$ is positive implying a saddle-like geometry.
+
+- We can compare the observed energy density $\rho_i$ to the the critical density by introducing a dimensionless ratio $\Omega_i \equiv \frac{\rho_i}{\rho_\text{crit}}$ known as the density parameter introduced in Section # such that at present-time @eq:friedmann becomes
+
+- $$
+  (\Omega_m + \Omega_r + \Omega_\Lambda )-1 = \frac{Kc^2}{H_0^2} \equiv \Omega_k
+  $$
+
+  where $\Omega_k$ is the curvature parameter and the density parameter of matter, radiation, dark energy, and the curvature are given by
+  $$
+  \Omega_m = \frac{8\pi G \rho_m}{3 H_0^2}, \quad \Omega_r = \frac{8\pi G \rho_\gamma}{3H_0^2}, \quad \Omega_\Lambda = \frac{\Lambda c^2}{3 H_0^2}
+  $$
+
+- The best measurements of the CMB indicate that at present-time the total density $\Omega_0$ is at unity with the critical density such that
+
+- $$
+  \Omega_0 = \Omega_m + \Omega_\gamma + \Omega_\Lambda + \Omega_k \simeq 1
+  $$
+
+  where the curvature parameter $\Omega_k \simeq 0$.
+
+### $\Lambda\text{CDM}$ Cosmology
+
+- ​
 
 ## Peculiar Velocity
 
@@ -95,7 +171,7 @@ $$
 
   ​
 
-The proportionality constant $H_0$ is better known as the Hubble constant, but is most usefully written as $H_0= 100\, h\,$\si{\km\per\s\per\Mpc} where $h$ is the dimensionless Hubble parameter defined by the current accepted value.
+
 
 
 

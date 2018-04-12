@@ -6,6 +6,8 @@ eqnos-plus-name: Eq.
 
 # Modern Cosmology & Large Scale Structure Formation
 
+The Lambda Cold Dark Matter ($\Lambda\text{CDM}$) model of cosmology is the strongest model for describing the past and future of the Universe and is predicated on the fundamental assumptions of the Cosmological Principle: that the Universe on large scales is isotropic and homogeneous. The importance of this assumption cannot be understated as the metric that follows from the model provides the basis for our understanding of the evolution and growth of structure in the Universe. Within this framework, we find the need for both dark matter and dark energy in order to describe a universe that adheres to the Cosmological Principle, but the model leaves much to be desired in our understanding of their fundamental nature. One possible way of probing these phenomenon is by testing the $\Lambda\text{CDM}$ paradigm in search of deviations from the model that may provide a glimpse to the inner workings of the Universe.
+
 ## General Relativity & Einstein's Field Equations
 
 - General relativity can be seen as the generalization of Newtonian gravity to a relativistic spacetime geometry.
@@ -79,32 +81,39 @@ eqnos-plus-name: Eq.
 
   represents the time-dependent Hubble parameter. At present, $H$ is known as the Hubble constant $H_0$ and is defined by $H_0 \equiv \dot a_0 / a_0 = \dot a_0$ (normalized to $a_0 =1$ at present-time). In practice, the value of the Hubble constant is most usefully written as $H_0= 100\, h\,$\si{\km\per\s\per\Mpc} in terms of the dimensionless parameter $h$ defined by the current accepted value. 
 
-- #### Cosmic Redshift
+  ### Cosmological Redshift
 
-  - In practice, the only meaningful way in which we can measure the cosmological expansion velocity is by measuring the redshift.
-
+- In practice, the only meaningful way in which we can measure the cosmological expansion velocity is by measuring the redshift. We can relate the cosmological redshift from @eq:redshift to the scale factor $a$ of the Universe by
   $$
-  v /c \simeq z_\text{cos} = \frac{\dot a \, \Delta t}{a} = H_0 d /c
+  z_\text{cos} \equiv \frac{\lambda_\text{obs} - \lambda_\text{em}}{\lambda_\text{em}} = \frac{a_0}{a_\text{em}}-1  = \frac{1}{a_\text{em}} -1
   $$
+  {#eq:cosredshift}
 
-  where
-  $$
-  z_\text{cos} = \frac{\lambda_\text{obs} - \lambda_\text{em}}{\lambda_\text{em}} = \frac{a_0}{a(t_\text{em})}-1
-  $$
-  is the cosmological redshift, 
+- where the present scale factor is given by $a_0 = a(t_\text{rec}) = 1$  corresponding to the time of observation $t_\text{rec}$ while $a_\text{em} = a(t_\text{em})$ is the the scale factor at the time of emission $t_\text{em}$.
 
-- In the low-velocity limit, we can approximate @eq:expansionvelo as Hubble's law by Taylor expanding about $a_0$ such that $a_0 - a(t_\text{em}) \simeq 1 - \dot a_0 \, \Delta t$ is a linear approximation of the rate of change of the scale factor with $\Delta t = t_\text{rec} - t_\text{em}$.
+ -  In the low-redshift limit, we can approximate @eq:expansionvelo as Hubble's law by Taylor expanding $a_\text{em}= a(t_\text{rec} - \Delta t)$ about $a_0$ such that $a_\text{em}  \simeq 1 - \dot a_0 \, \Delta t$ is the first-order approximation where $\Delta t = t_\text{rec} - t_\text{em}$. Then by using the definition of the Hubble constant and the binomial approximation we can rewrite @eq:cosredshift as 
 
--  and $H_0 d$ is the expansion velocity at present-time.
+     -  $$
+        z_\text{cos} \approx \dot a \, \Delta t = H_0 \, \Delta d/c \, .
+        $$
 
-  ### Friedmann Equation
+
+    where $cz_\text{cos} \approx H_0 d$ is the approximate expansion velocity at present-time for $z \ll 1$.
+
+### Friedmann Equation for an Evolving Universe
 
 - Solving the EFEs using the FLRW metric provides the Friedman equation that model the time-evolution of a homogeneous and isotropic Universe:
   $$
-  H^2 \equiv \left( \frac{\dot a}{a} \right)^2 = \frac{8\pi G}{3} \rho_\text{tot} - \frac{K c^2}{a^2}
+  H^2 \equiv \left( \frac{\dot a}{a} \right)^2 = \left( \frac{8\pi G}{3} \right) \rho_\text{tot} - \frac{K c^2}{a^2}
   $$
 
-  - {#friedmann} where $\rho_\text{tot} \equiv \rho_m + \rho_r + \rho_\Lambda $ the total energy density due to the energy density of matter $\rho_m$, radiation $\rho_r$, and dark energy $\rho_\Lambda$.
+  - {#friedmann} where
+
+  - $$
+    \rho_\text{tot} \equiv \frac{\rho_{m0}}{a^3} +\frac {\rho_{r0} }{a^4} + \rho_\Lambda
+    $$
+
+  - is the total energy density and $\rho_{m0}$ and $\rho_{r0}$ are the matter and radiation density at present and $\rho_\Lambda$ is the energy density due to the cosmological constant which is constant with time.
 
 
 - We can define the _critical density_ $\rho_\text{crit}$ from the Friedmann equation as
@@ -113,7 +122,7 @@ eqnos-plus-name: Eq.
   \rho_\text{crit} = \frac{3 H^2}{8\pi G}
   $$
 
-  which when compared to the total density $\rho_\text{total}$ determines the type of spatial curvature of the Universe. If the total density equals the critical density than $K$ must be zero and the Universe has a flat spatial geometry. While if the total density is less than the critical density than $K$ is negative implying a spherical geometry and if greater than the critical density than $K$ is positive implying a saddle-like geometry.
+  which when compared to the total density $\rho_\text{total}$ determines the type of spatial curvature of the Universe. If the total density equals the critical density than $K$ must be zero and the Universe has no spatial curvature indicating a flat spatial geometry. If the total density is less than the critical density than $K$ is negative implying a spherical geometry and if greater than the critical density than $K$ is positive implying a saddle-like geometry.
 
 - We can compare the observed energy density $\rho_i$ to the the critical density by introducing a dimensionless ratio $\Omega_i \equiv \frac{\rho_i}{\rho_\text{crit}}$ known as the density parameter introduced in Section # such that at present-time @eq:friedmann becomes
 
@@ -126,7 +135,7 @@ eqnos-plus-name: Eq.
   \Omega_m = \frac{8\pi G \rho_m}{3 H_0^2}, \quad \Omega_r = \frac{8\pi G \rho_\gamma}{3H_0^2}, \quad \Omega_\Lambda = \frac{\Lambda c^2}{3 H_0^2}
   $$
 
-- The best measurements of the CMB indicate that at present-time the total density $\Omega_0$ is at unity with the critical density such that
+- The best measurements of the CMB indicate that the total density $\Omega_0$ is at unity with the critical density such that
 
 - $$
   \Omega_0 = \Omega_m + \Omega_\gamma + \Omega_\Lambda + \Omega_k \simeq 1
@@ -134,11 +143,17 @@ eqnos-plus-name: Eq.
 
   where the curvature parameter $\Omega_k \simeq 0$.
 
-### $\Lambda\text{CDM}$ Cosmology
+- Finally, if we express the Friedmann equation in terms of the density parameters and use the definition of the Hubble parameter then 
+
+- $$
+  \left( \frac{da}{dt} \right)^2 = H_0^2 \left( \frac{\Omega_m}{a} + \frac{\Omega_\gamma}{a^2} + \Omega_\Lambda \, a^2 + \Omega_k 	\right)
+  $$
+
+  is the cosmological equation of motion that describes the evolution of the Universe based on the current expansion rate $H_0$, the individual mass-energy densities $\Omega_i$, and the spatial curvature $K$.
 
 - ​
 
-## Peculiar Velocity
+### Peculiar Velocity
 
 Hubble's law represents an empirical relationship for the expanding universe where each galaxy is static with respect to cosmological expansion. However, an ideal Hubble's law neglects gravitational attraction to higher density regions of space which induce 'peculiar' motion that deviates from cosmological expansion velocity $c z_\text{cos} = H_0d$ (also known as the Hubble flow). The consequence of a continuous inflow of matter towards these regions of space is a state of matter over-density known as gravitational collapse, which provides the means for the formation and growth of structure in the local Universe. 
 

@@ -6,7 +6,11 @@ eqnos-plus-name: Eq.
 
 # Modern Cosmology & Large Scale Structure Formation
 
-The Lambda Cold Dark Matter ($\Lambda\text{CDM}$) model of cosmology is the strongest model for describing the past and future of the Universe and is predicated on the fundamental assumptions of the Cosmological Principle: that the Universe on large scales is isotropic and homogeneous. The importance of this assumption cannot be understated as the metric that follows from the model provides the basis for our understanding of the evolution and growth of structure in the Universe. Within this framework, we find the need for both dark matter and dark energy in order to describe a universe that adheres to the Cosmological Principle, but the model leaves much to be desired in our understanding of their fundamental nature. One possible way of probing these phenomenon is by testing the $\Lambda\text{CDM}$ paradigm in search of deviations from the model that may provide a glimpse to the inner workings of the Universe.
+The Lambda Cold Dark Matter ($\Lambda\text{CDM}$) model of cosmology is the strongest model for describing the past and future of the Universe and is predicated on the fundamental assumptions of the Cosmological Principle: that the Universe on large scales is isotropic and homogeneous. The importance of this assumption cannot be understated as the metric that follows from the model provides the basis for our understanding of the evolution and growth of structure in the Universe. Within this framework, measurements from galaxy rotations, the cosmic microwave background radiation, Type Ia supernovae, and big bang nucleosynthesis strongly support the need for both dark matter and dark energy to describe a universe that adheres to the Cosmological Principle. And, while the model tells us about the density composition of the Universe it leaves much to be desired in our fundamental understanding of dark matter and dark energy, which together compose the vast majority of the known Universe. 
+
+We can investigate these mysterious phenomenon through peculiar velocity surveys which use galaxies as tracers of the underlying density field that is predominately formed by dark matter. Thus, by analyzing large scale motion in the local Universe we can test paradigms set forth by the $\Lambda\text{CDM}$ model in search of inconsistencies or deviations that may provide new insight into the inner workings of the Universe. 
+
+In the first section we provide the theoretical foundation of modern cosmology: Einstein's theory of general relativity, the FLRW metric, and the Friedmann equation for an evolving universe. 
 
 ## General Relativity & Einstein's Field Equations
 
@@ -71,12 +75,13 @@ The Lambda Cold Dark Matter ($\Lambda\text{CDM}$) model of cosmology is the stro
     $$
 
 
+
   {#eq:expansionvelo}
 
   where
-  $$
+$$
   H(t) \equiv \frac{\dot a}{a}
-  $$
+$$
   {#eq:hubbleparam}
 
   represents the time-dependent Hubble parameter. At present, $H$ is known as the Hubble constant $H_0$ and is defined by $H_0 \equiv \dot a_0 / a_0 = \dot a_0$ (normalized to $a_0 =1$ at present-time). In practice, the value of the Hubble constant is most usefully written as $H_0= 100\, h\,$\si{\km\per\s\per\Mpc} in terms of the dimensionless parameter $h$ defined by the current accepted value. 
@@ -98,7 +103,9 @@ The Lambda Cold Dark Matter ($\Lambda\text{CDM}$) model of cosmology is the stro
         $$
 
 
-    where $cz_\text{cos} \approx H_0 d$ is the approximate expansion velocity at present-time for $z \ll 1$.
+
+     where $cz_\text{cos} \approx H_0 d$ is the approximate expansion velocity at present-time for $z \ll 1$.
+
 
 ### Friedmann Equation for an Evolving Universe
 
@@ -151,25 +158,27 @@ The Lambda Cold Dark Matter ($\Lambda\text{CDM}$) model of cosmology is the stro
 
   is the cosmological equation of motion that describes the evolution of the Universe based on the current expansion rate $H_0$, the individual mass-energy densities $\Omega_i$, and the spatial curvature $K$.
 
+### Gravitational Instability and Peculiar Velocity Statistics
+
+- While the Universe on very large scales is both isotropic and homogeneous, the tiny temperature fluctuations seen in the cosmic microwave background reflect the dawn of structure formation in the early Universe.
+
+
+
+- These fluctuations reflect the growth of density perturbations in the primordial matter density field as matter attracted into over-dense regions known as gravitational instability theory.
+
+- In linear theory, the first-order perturbation term $\delta$ is related to the matter density field  $\rho$ by
+  $$
+  \rho(\textbf{r}) = \bar\rho (1 + \delta(\textbf{r}))
+  $$
+  where $\bar \rho$ is the average matter density such that the the matter density perturbation can be expressed as
+  $$
+  \delta(\textbf{r}) =\frac{\rho(\textbf{r}) - \bar\rho }{\bar\rho}\, .
+  $$
+  ​
+
 - ​
 
-### Peculiar Velocity
-
-Hubble's law represents an empirical relationship for the expanding universe where each galaxy is static with respect to cosmological expansion. However, an ideal Hubble's law neglects gravitational attraction to higher density regions of space which induce 'peculiar' motion that deviates from cosmological expansion velocity $c z_\text{cos} = H_0d$ (also known as the Hubble flow). The consequence of a continuous inflow of matter towards these regions of space is a state of matter over-density known as gravitational collapse, which provides the means for the formation and growth of structure in the local Universe. 
-
-Thus, measurements of peculiar velocity are a compelling cosmological probe of local structure and the nature of dark matter due to the motion of galaxies tracing the underlying matter density field.
-
-
-
-We can estimate peculiar velocities as deviations within the observed redshift $z_{obs}$ from Hubble's law as a result of Doppler redshift $z_\text{doppler}$ due to local motion. Unfortunately we are observationally limited to receding and approaching wavelengths along the 1D line-of-sight component of a galaxy's full 3D peculiar velocity vector. Any transverse motion along the line-of-sight is far too small to be detected through spectroscopic measurements and thus we would also expect any contribution to the line-of-sight to be in the form of noise in the signal. Following @eq:Hubble, at low-redshift where $v \ll c$, the line-of-sight component of the peculiar velocity $v_p$ is given by the familiar form
-
-$$v_p \approx cz_\text{obs} - H_0d$$ {#eq:pecveloapprox}
-
-\noindent where $c$ is the speed of light, $z_\text{obs}$ is the observed redshift, and $H_0d$ is the cosmological expansion velocity at a given comoving distance\footnote{Comoving distance refers to the real distance between two objects at rest with respect to the Hubble flow. In simpler terms, comoving distance is the physical distance between two objects in the absence of cosmic expansion.} $d$\footnote{Davis et al shows that due to redshift not being an additive property this crude approximation is only accurate for $z_\text{obs} << 0.1$, but for the introductory purposes of this section we find this form more than sufficient. We will revisit this equation in Section 2.#}. Therefore given a distance indicator, the comoving distance $d$ can be measured independently from the observed redshift $z_\text{obs}$ allowing us to estimate the peculiar velocity. The most common form of distance indicators are the various standard candles introduced in Sec 1.# which unfortunately suffer from large uncertainties. In contrast to the high accuracy redshift measurements available, the uncertainty on distance estimators can be upwards of $\simeq 20\%$ which can lead to uncertainties in the peculiar velocity measurement on the order of the velocity itself. Typical peculiar velocity measurement are expected to be of order \SI{300}{km/s} while the errors scale largely with the distance of the galaxy such that uncertainty $\delta_{v_p}$ can be approximated by $\delta_{v_p} \approx 0.20 H_0 d$. Given the large uncertainties, peculiar velocity measurements must be estimated through statistical means thus requiring large velocity surveys with both distance and redshift measurements\footnote{In Section 2.# we will discuss an estimator method developed by Watkins & Feldman that provides a more accurate method of statistically estimating peculiar velocities.}.
-
-
-
-- ​
+  ​
 
   ### For next section on cosmology
 
@@ -177,11 +186,13 @@ $$v_p \approx cz_\text{obs} - H_0d$$ {#eq:pecveloapprox}
 
 
 $$
-v_p \equiv \textbf{\textit{v}} \cdot \textbf{\hat{r}} = c \left ( \frac{z\text{obs} - z\text{cos}}{1 + z_\text{cos}}  \right)
+v_p \equiv \textbf{\textit{v}} \cdot \textbf{\hat{r}} = c \left ( \frac{z_\text{obs} - z_\text{cos}}{1 + z_\text{cos}}  \right)
 $$
 
+
+
 - $$
-  1 + z = (1 + z_H)(1 + v_{pec}/c)
+  1 + z = (1 + z_\text{cos})(1 + v_{pec}/c)
   $$
 
   ​

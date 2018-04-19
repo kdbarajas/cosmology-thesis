@@ -78,6 +78,7 @@ In the first section we provide the theoretical foundation of modern cosmology: 
 
 
 
+
   {#eq:expansionvelo}
 
   where
@@ -177,11 +178,11 @@ $$
   $$
   \textbf{v}(\textbf{r}) = \int d^3k \ \textbf{v}(\textbf{k})\exp(i\textbf{k} \cdot \textbf{r}) \quad\text{and}\quad \textbf{v}(\textbf{k}) = \int d^3k \ \textbf{v}(\textbf{k})\exp(i\textbf{k} \cdot \textbf{r}) \, .
   $$
-  ​
+  {#velotransform}
 
 - In linear theory, the velocity field is directly related to the underlying matter density field through the continuity equation\footnote{Provide continuity equation. Fluid in gravitational field. Conservation of mass. Dependent on the dynamics of the fluid such as density, pressure, and velocity distribution.} such that
   $$
-  \textbf{v}(\textbf{k}) = \frac{iH_0f}{k^2} \textbf{k} \, \delta(\textbf{k})
+  \textbf{v}(\textbf{k}) = - \frac{iH_0f}{k^2} \textbf{k} \, \delta(\textbf{k})
   $$
   {#eq:continuity}
 
@@ -193,7 +194,7 @@ $$
   $$
   \textbf{v}(\textbf{r}) = \frac{H_0 f}{4\pi} \int d^3\textbf{r}^\prime \frac{\delta(\textbf{r}^\prime)(\textbf{r}^\prime - \textbf{r})}{|\textbf{r}^\prime - \textbf{r}|^3}\,
   $$
-  where it becomes more obvious that peculiar velocities are a strong probe of structure on any scales due to their highly sensitive to perturbations of the underlying density field.
+  where it becomes more obvious that peculiar velocities are a strong probe of structure on any scales due to being highly sensitive to perturbations of the underlying density field.
 
   ​
 
@@ -201,12 +202,15 @@ $$
   $$
   \left<  |\delta(\textbf{k})|^2 \right> \equiv P(k)
   $$
+  {#eq:densityps}
+
   ​
 
   Velocity field power spectrum
   $$
   P_v(k) \equiv \left<  |v(\textbf{k})|^2  \right> = \left( \frac{H_0 f}{k} \right)^2 P(k)
   $$
+  {#eq:velocityps}
 
 - The velocity power spectrum is a complete statistical description of peculiar velocities on linear scales where density perturbations are Gaussian.
 
@@ -245,18 +249,58 @@ $$
   $$
   with an uncertainty of $\delta v_e = cz_\text{mod} \delta \mu_e / ( 1 + z_\text{mod})$ where $\delta \mu_e$ is the uncertainty in the log distance measurement.
 
-- If we had a full 3D view of the velocity field we could make a straightforward measurement of the velocity correlation between galaxies, however we are observationally limited to the 1D radial component of the peculiar velocity. We use the theoretical covariance matrix
+  ### Velocity Covariance Matrix
+
+- If we had a full 3D view of the velocity field we could make a straightforward measurement of the velocity correlation between galaxies, however we are observationally limited to the 1D radial component of the peculiar velocity. We use a theoretical velocity covariance matrix developed by Kaiser (1988) to characterize the growth of structure on large scales from perturbations in the matter distribution.
 
 
-- $S$ is dependent on the position of a galaxy $i$ such that
+- Measurement of the 1D line-of-sight peculiar velocity for a galaxy $i$ can be expanded in Fourier modes via @eq:velotransform:
+  $$
+  S_i (\textbf{r}_0) = \textbf{v}(\textbf{r}_0 + \textbf{r}_i) \cdot \hat{\textbf{r}}_i = \int d^3 k \ \hat{\textbf{k}} \cdot \hat{\textbf{r}}_i \, v(\textbf{k}) \, \exp [ i \textbf{k} \cdot (\textbf{r}_0 + \textbf{r}_i) ]
+  $$
 
-$$
-S_i (\textbf{r}_0) = \textbf{v}(\textbf{r}_0 + \textbf{r}_i) \cdot \hat{\textbf{r}}_i = \int d^3 k \ \hat{\textbf{k}} \cdot \hat{\textbf{r}}_i \, v(\textbf{k}) \, \exp [ i \textbf{k} \cdot (\textbf{r}_0 + \textbf{r}_i) ]
-$$
-
-- ​
+  - where we have adopted the standard notation $S_i$ to represent the velocity data and $\textbf{r}_0$ is the relative position from which measurements of a galaxy's distance at $\textbf{r}_i$ are made.
 
 
+- The covariance matrix is given by
+  $$
+  \begin{split}
+  R_{ij} &  = \left<(\hat{\textbf{r}}_i \cdot \textbf{v}(\textbf{r}_i)\, (\hat{\textbf{r}}_j \cdot \textbf{v}(\textbf{r}_j) \right>  + (\sigma_{\text{obs},i}^2 + \sigma_{*,i}^2)\, \delta_{ij} \\
+  & = \left< S_i S_j  \right> + \Sigma_{i}^2 \, \delta_{ij}
+  \end{split}
+  $$
+
+  - where the noise term $\Sigma_{i}^2 = \sigma_{\text{obs},i}^2 + \sigma_{*,i}^2$ represents the sum of the observational uncertainties $\sigma_{\text{obs},i}$ and the small-scale non-linear velocity term $\sigma_{*,i}$ such that
+
+    ​
+
+    ​
+
+  - $\left< S_i S_j  \right>$ depends on the model and the relative position between galaxies $i$ and $j$ such that
+    $$
+    \left< S_i(\textbf{r}_i) S_j(\textbf{r}_j) \right>= \frac{H_0^2 f(\Omega_m)^2}{2\pi^2} \int dk \, P(k) \, \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)
+    $$
+    where $P(k)​$ is the power spectrum of the density field defined in @eq:densityps and @eq:velocityps and $\mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)​$ is the tensor window function calculated from galaxy position given by
+    $$
+    \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k) = \int \frac{d^2k}{4\pi} \, \exp(i \textbf{k} \cdot (\textbf{r}_i - \textbf{r}_j)) \, ( \hat{\textbf{r}}_i \cdot \hat{\textbf{k}}) \, ( \hat{\textbf{r}}_j \cdot \hat{\textbf{k}}) \,.
+    $$
+    {#eq:tensorwindow}
+
+  - Ma et al. (2011) provides an analytical form of @eq:tensorwindow that transforms the tensor window function using spherical harmonics such that
+    $$
+    \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k) =  \frac{1}{3} \cos \alpha \, (j_0(k A) - 2j_2(kA)) + \frac{1}{A^2} j_2(kA) \, r_i \, r_j\sin^2\alpha
+    $$
+    where $j_0$ and $j_2$ are spherical bessel functions, $A = |\textbf{r}_i - \textbf{r}_j|$ is the radial separation distance, and $\alpha$ is the angle between $\textbf{r}_i$ and $\textbf{r}_j$.
+
+    ​
+
+    ​
+
+    ​
+
+    ​
+
+    ​
 
 
 

@@ -21,34 +21,29 @@ In the first section we provide the theoretical foundation of modern cosmology: 
   - where we define separation between two events by the line segment $ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2 \equiv g_{\mu\nu}dx^\mu dx^\nu$, an invariant quantity under coordinate transformation\footnote{This means that from any inertial frame of reference, an observer would measure the same separation $ds$.}
 
 - Einstein's Field Equations:
-
-- $$
+  $$
   G^{\mu\nu} = \frac{8\pi G}{c^4} \left( T^{\mu\nu} + T_{\text{vac}}^{\mu\nu} \right) = \frac{8\pi G}{c^4} T_{\text{all}}^{\mu\nu}
   $$
+  {#eq:EFE}
 
   - Left side represents a second-rank tensor that describes the curvature of spacetime.
 
   - Right side represents the stress-energy tensor $T_{\text{all}}^{\mu\nu}$ for the total matter and energy in the Universe. The first term represents the stress-energy $T^{\mu\nu}$ for a perfect fluid associated with a homogeneous and isotropic Universe. The second term represents the stress-energy for a vacuum that acts a repulsive pressure that counteracts gravitational attraction,
-
-  - $$
+    $$
     T_{\text{vac}}^{\mu\nu} = - \frac{\Lambda c^4}{8\pi G} g^{\mu\nu}
     $$
-
     where $\Lambda$ represents the cosmological constant providing the best account for dark energy in the $\Lambda\text{CDM}$ model.
 
 ## Friedmann-Lemaitre-Robertson-Walker Metric
 
 - The FLRW metric for a homogeneous and isotropic Universe is given by
-
-- $$
+  $$
   ds^2 = -c^2dt^2 + a(t)^2 dr^2
   $$
-
-  - where $a(t)$ represents the scale factor and the distance $r$ describes the comoving radial distance between two galaxies independent of cosmic expansion over any 3-dimensional coordinate space.
+  where $a(t)$ represents the scale factor and the distance $r$ describes the comoving radial distance between two galaxies independent of cosmic expansion over any 3-dimensional coordinate space.
 
 - The FLRW metric takes the standard form in hyperspherical coordinates
-
-- $$
+  $$
   ds^2 = -c^2dt^2 + R(t)^2 \left[  d\chi^2 + S_K(\chi)^2 \,  d\Omega^2   \right]
   $$
 
@@ -69,25 +64,19 @@ In the first section we provide the theoretical foundation of modern cosmology: 
   ### Hubble Flow
 
 - As before, the comoving distance coordinate $\bar{r}$ describes the distance between two galaxies independent of cosmic expansion. The 'true' physical distance $d$, otherwise known as the proper distance, is the physical separation an observer at rest with respect to cosmic expansion would observe a distant galaxy and is dependent on the scale factor such that  $d(t) = a(t) \, \bar{r}$. The cosmic expansion velocity $v$ (more commonly known as the Hubble flow) can therefore be deduced from the rate of change of the separation distance such that
-
-  - $$
-    v \equiv \dot d = \frac{\dot a}{a} \, d = H(t) \, d
-    $$
-
-
-
-
-
-
+  $$
+  v \equiv \dot d = \frac{\dot a}{a} \, d = H(t) \, d
+  $$
   {#eq:expansionvelo}
 
   where
-$$
+  $$
   H(t) \equiv \frac{\dot a}{a}
-$$
+  $$
   {#eq:hubbleparam}
 
   represents the time-dependent Hubble parameter. At present, $H$ is known as the Hubble constant $H_0$ and is defined by $H_0 \equiv \dot a_0 / a_0 = \dot a_0$ (normalized to $a_0 =1$ at present-time). In practice, the value of the Hubble constant is most usefully written as $H_0= 100\, h\,$\si{\km\per\s\per\Mpc} in terms of the dimensionless parameter $h$ defined by the current accepted value. 
+
 
   ### Cosmological Redshift
 
@@ -153,7 +142,7 @@ $$
   $$
   is the cosmological equation of motion that describes the evolution of the Universe based on the current expansion rate $H_0$, the individual mass-energy densities $\Omega_i$, and the spatial curvature $K$.
 
-### Gravitational Instability and Growth of Structure
+### Gravitational Instability and the Growth of Structure
 
 - While the Universe on very large scales is both isotropic and homogeneous, the tiny temperature fluctuations seen in the cosmic microwave background reflect the dawn of structure formation in the early Universe.
 
@@ -214,8 +203,47 @@ $$
 
 - The velocity power spectrum is a complete statistical description of peculiar velocities on linear scales where density perturbations are Gaussian.
 
+- We follow Eisenstein and Hu (1998) to model the power spectrum as an initial power law such that $P(k) \propto  k^n T^2(k)$ where $n$ is the spectral index and $T(k)$ is the transfer function fitted by
+  $$
+  \begin{split}
+  T(q) & = \frac{L_0}{L_0 + C_0 q^2}, \\
+  L(q) & = \log(2e + 1.8q), \\
+  C(q) & = 14.2 + \frac{731}{1 + 62.5q} \, .
+  \end{split}
+  $$
+  where we parameterize the transfer function by
+  $$
+  q = \frac{k}{h \ \text{Mpc}^{-1}} \cdot \left( \frac{\vartheta_{2.7}^2}{\Gamma} \right) \,.
+  $$
 
-## Peculiar Velocity Statistics
+  - Here, we parameterize the CMB temperature as $T_\text{CMB} = 2.7\vartheta_{2.7}$\si{\kelvin} and use the shape parameter  $\Gamma$ which in the zero-baryon limit is $\Omega_m h$. However, a more accurate fit that takes into account the effects of baryonic oscillations is given by
+    $$
+    \Gamma_\text{eff}(k) = \Omega_m h \left[ \alpha_\Gamma + \frac{1- \alpha_\Gamma}{1 + (0.43ks)^4} \right]
+    $$
+    where
+    $$
+    \begin{split}
+    \alpha_\Gamma = & 1 - 0.328 \log(431 \Omega_m h^2) \, \frac{\Omega_b}{\Omega_m}\\
+    & + 0.38 \log(22.3 \Omega_m h^2) \left( \frac{\Omega_b}{\Omega_m} \right)^2, \\
+    s = & \frac{44.5 \,h \log(9.83/\Omega_mh^2)}{\sqrt{1 + 10(\Omega_bh^2)^{3/4}}} \, h^{-1}\text{Mpc}
+    \end{split}
+    $$
+    ​
+
+- Normalizing to a sphere of radius $8h^{-1}\text{Mpc}$, the scale on which matter fluctuations become non-linear
+  $$
+  \sigma_8^2 = \int_0^\infty \frac{dk}{k} \Delta^2(k) \left[  \frac{3j_1(kR)}{kR}  \right]^2
+  $$
+  where $j_1$ is the spherical Bessel function $j_1(x) = (\sin x - x \cos x)/x^2$.
+
+   
+
+   
+
+
+## Peculiar Velocity Statistics & Models
+
+### 	Gaussian Peculiar Velocity Estimator
 
 - From Sec # we can move towards a more accurate estimates of peculiar  velocities.
 
@@ -270,7 +298,9 @@ $$
   \end{split}
   $$
 
-  - where the noise term $\Sigma_{i}^2 = \sigma_{\text{obs},i}^2 + \sigma_{*,i}^2$ represents the sum of the observational uncertainties $\sigma_{\text{obs},i}$ and the small-scale non-linear velocity term $\sigma_{*,i}$ such that
+  {#:eq:covariance}
+
+  - where the noise term $\Sigma_{i}^2 = \sigma_{\text{obs},i}^2 + \sigma_{*,i}^2$ represents the sum of the observational uncertainties $\sigma_{\text{obs},i}$ and the 1D velocity dispersion term $\sigma_{*,i}$ that account for non-linear small-scale motions.
 
     ​
 
@@ -292,16 +322,25 @@ $$
     $$
     where $j_0$ and $j_2$ are spherical bessel functions, $A = |\textbf{r}_i - \textbf{r}_j|$ is the radial separation distance, and $\alpha$ is the angle between $\textbf{r}_i$ and $\textbf{r}_j$.
 
-    ​
+  ### Maximum Likelihood Estimate
 
-    ​
+- Given the line-of-sight peculiar velocities $S_i(\textbf{r}_i)$ for a given observational dataset of $N$, the probability of observing a given cosmological model is given by
+  $$
+  \mathcal{L}(\theta) = \frac{1}{\left( 2\pi \right)^{N/2} \, |R(\theta)|^{1/2}} \, \exp \left( -\frac{1}{2} {S_i}^T R_{ij}^{-1}(\theta) S_j  \right)
+  $$
+  where $R_{ij}$ is the covariance matrix defined in @eq:covariance and $\theta$ is a model parameter that depends on the underlying cosmology.
 
-    ​
+   
 
-    ​
+  ​
 
-    ​
+  ​
 
+  ​
+
+  ​
+
+  ​
 
 
 

@@ -236,7 +236,6 @@ In the first section we provide the theoretical foundation of modern cosmology: 
   $$
   where $j_1$ is the spherical Bessel function $j_1(x) = (\sin x - x \cos x)/x^2$.
 
-   
 
    
 
@@ -310,7 +309,7 @@ $$
     $$
     \left< S_i(\textbf{r}_i) S_j(\textbf{r}_j) \right>= \frac{H_0^2 f(\Omega_m)^2}{2\pi^2} \int dk \, P(k) \, \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)
     $$
-    where $P(k)​$ is the power spectrum of the density field defined in @eq:densityps and @eq:velocityps and $\mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)​$ is the tensor window function calculated from galaxy position given by
+    where $P(k)$ is the power spectrum of the density field defined in @eq:densityps and @eq:velocityps and $\mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)$ is the tensor window function calculated from galaxy position given by
     $$
     \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k) = \int \frac{d^2k}{4\pi} \, \exp(i \textbf{k} \cdot (\textbf{r}_i - \textbf{r}_j)) \, ( \hat{\textbf{r}}_i \cdot \hat{\textbf{k}}) \, ( \hat{\textbf{r}}_j \cdot \hat{\textbf{k}}) \,.
     $$
@@ -329,50 +328,6 @@ $$
   \mathcal{L}(\theta) = \frac{1}{\left( 2\pi \right)^{N/2} \, |R(\theta)|^{1/2}} \, \exp \left( -\frac{1}{2} {S_i}^T R_{ij}^{-1}(\theta) S_j  \right)
   $$
   where $R_{ij}$ is the covariance matrix defined in @eq:covariance and $\theta$ is a model parameter that depends on the underlying cosmology.
-
-   
-
-  ​
-
-  ​
-
-  ​
-
-  ​
-
-  ​
-
-
-
-
-
-
-
-
-
-
-​
-
-​
-
-​
-
-### For next section on cosmology
-
-​
-$$
-
-$$
-
-
-
-
-
-- $$
-  1 + z = (1 + z_\text{cos})(1 + v_{pec}/c)
-  $$
-
-  ​
 
 
 

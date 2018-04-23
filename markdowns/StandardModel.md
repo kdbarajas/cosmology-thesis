@@ -215,30 +215,34 @@ In the first section we provide the theoretical foundation of modern cosmology: 
   $$
   q = \frac{k}{h \ \text{Mpc}^{-1}} \cdot \left( \frac{\vartheta_{2.7}^2}{\Gamma} \right) \,.
   $$
-
-  - Here, we parameterize the CMB temperature as $T_\text{CMB} = 2.7\vartheta_{2.7}$\si{\kelvin} and use the shape parameter  $\Gamma$ which in the zero-baryon limit is $\Omega_m h$. However, a more accurate fit that takes into account the effects of baryonic oscillations is given by
-    $$
-    \Gamma_\text{eff}(k) = \Omega_m h \left[ \alpha_\Gamma + \frac{1- \alpha_\Gamma}{1 + (0.43ks)^4} \right]
-    $$
-    where
-    $$
-    \begin{split}
-    \alpha_\Gamma = & 1 - 0.328 \log(431 \Omega_m h^2) \, \frac{\Omega_b}{\Omega_m}\\
-    & + 0.38 \log(22.3 \Omega_m h^2) \left( \frac{\Omega_b}{\Omega_m} \right)^2, \\
-    s = & \frac{44.5 \,h \log(9.83/\Omega_mh^2)}{\sqrt{1 + 10(\Omega_bh^2)^{3/4}}} \, h^{-1}\text{Mpc}
-    \end{split}
-    $$
-    ​
-
-- Normalizing to a sphere of radius $8h^{-1}\text{Mpc}$, the scale on which matter fluctuations become non-linear
+  with the CMB temperature given by $T_\text{CMB} = 2.7\vartheta_{2.7}$\si{\kelvin} and we use the shape parameter  $\Gamma$ (which is $\Omega_m h$ in the zero-baryon limit). However, the baryonic density is non-negligible and so a more accurate fit that takes into account the effects of baryonic oscillations is given by
   $$
-  \sigma_8^2 = \int_0^\infty \frac{dk}{k} \Delta^2(k) \left[  \frac{3j_1(kR)}{kR}  \right]^2
+  \Gamma_\text{eff}(k) = \Omega_m h \left[ \alpha_\Gamma + \frac{1- \alpha_\Gamma}{1 + (0.43ks)^4} \right]
   $$
-  where $j_1$ is the spherical Bessel function $j_1(x) = (\sin x - x \cos x)/x^2$.
+  where
+  $$
+  \begin{split}
+  \alpha_\Gamma = & 1 - 0.328 \log(431 \Omega_m h^2) \, \frac{\Omega_b}{\Omega_m}\\
+  & + 0.38 \log(22.3 \Omega_m h^2) \left( \frac{\Omega_b}{\Omega_m} \right)^2, \\
+  s = & \frac{44.5 \,h \log(9.83/\Omega_mh^2)}{\sqrt{1 + 10(\Omega_bh^2)^{3/4}}} \, h^{-1}\text{Mpc} \,.
+  \end{split}
+  $$
 
-   
+- We normalize the linear  power spectrum to a sphere of radius $ R = 8h^{-1}\text{Mpc}$, the scale on which matter fluctuations become non-linear, such that that variance is given by
+  $$
+  \sigma_8^2 = \int_0^\infty \frac{dk}{k} \Delta^2(k) \widetilde{W}^2(kR)
+  $$
+  where $\widetilde{W}(kR) =  \frac{3j_1(kR)}{kR} $ is the spherical top-hat window, $j_1$ is the first order spherical Bessel function $j_1(x) = (\sin x - x \cos x)/x^2$, and $\Delta^2(k)$ is the dimensionless power spectrum which at present-time (i.e. $z=0$) is related to the power spectrum by
+  $$
+  \Delta^2(k)|_{z=0} \equiv \frac{k^3}{2\pi^2} P(k) \,.
+  $$
 
-   
+- The normalization amplitude $a_\text{norm}$ of the power spectrum is thus given by
+  $$
+  a_\text{norm} = \frac{\sigma_8^2}{ \int_0^\infty \frac{dk}{k} \Delta^2(k)|_{z=0} \, \widetilde{W}^2(kR)} \,.
+  $$
+
+
 
 
 ## Peculiar Velocity Statistics & Models
@@ -302,15 +306,13 @@ $$
 
   - where the noise term $\Sigma_{i}^2 = \sigma_{\text{obs},i}^2 + \sigma_{*,i}^2$ represents the sum of the observational uncertainties $\sigma_{\text{obs},i}$ and the 1D velocity dispersion term $\sigma_{*,i}$ that account for non-linear small-scale motions.
 
-    ​
-
-    ​
-
   - $\left< S_i S_j  \right>$ depends on the model and the relative position between galaxies $i$ and $j$ such that
     $$
-    \left< S_i(\textbf{r}_i) S_j(\textbf{r}_j) \right>= \frac{H_0^2 f(\Omega_m)^2}{2\pi^2} \int dk \, P(k) \, \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)
+    \left< S_i(\textbf{r}_i) S_j(\textbf{r}_j) \right>= \frac{H_0^2 f(\Omega_m)^2 a_\text{norm}}{2\pi^2} \int dk \, P(k) \, \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)
     $$
-    where $P(k)​$ is the power spectrum of the density field defined in @eq:densityps and @eq:velocityps and $\mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)​$ is the tensor window function calculated from galaxy position given by
+    {#eq:correlation}
+
+    where $P(k)$ is the power spectrum of the density field defined in @eq:densityps and @eq:velocityps and $\mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)$ is the tensor window function calculated from galaxy position given by
     $$
     \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k) = \int \frac{d^2k}{4\pi} \, \exp(i \textbf{k} \cdot (\textbf{r}_i - \textbf{r}_j)) \, ( \hat{\textbf{r}}_i \cdot \hat{\textbf{k}}) \, ( \hat{\textbf{r}}_j \cdot \hat{\textbf{k}}) \,.
     $$
@@ -320,19 +322,38 @@ $$
     $$
     \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k) =  \frac{1}{3} \cos \alpha \, (j_0(k A) - 2j_2(kA)) + \frac{1}{A^2} j_2(kA) \, r_i \, r_j\sin^2\alpha
     $$
-    where $j_0$ and $j_2$ are spherical bessel functions, $A = |\textbf{r}_i - \textbf{r}_j|$ is the radial separation distance, and $\alpha$ is the angle between $\textbf{r}_i$ and $\textbf{r}_j$.
+    {#eq:analytical}
+
+    where $j_0$ and $j_2$ are spherical Bessel functions, $A = |\textbf{r}_i - \textbf{r}_j|$ is the radial separation distance, and $\alpha$ is the angle between $\textbf{r}_i$ and $\textbf{r}_j$.
+
+- Finally, @eq:correlation and @eq:analytical suggests that the line-of-sight peculiar velocity dispersion for a given galaxy $i$ should be given by the 1D rms velocity $\sigma_{v,i}$ where
+  $$
+  \sigma_{v,i}^2 = \frac{1}{3}\frac{H_0^2 f(\Omega_m)^2 a_\text{norm}}{2\pi^2} \int dk \, P(k) \, .
+  $$
+  ​
 
   ### Maximum Likelihood Estimate
 
-- Given the line-of-sight peculiar velocities $S_i(\textbf{r}_i)$ for a given observational dataset of $N$, the probability of observing a given cosmological model is given by
+- Given the line-of-sight peculiar velocity vector $\textbf{S}_i= S_i(\textbf{r}_i)\cdot \hat{\textbf{r}}_i$ for a given observational dataset of $N$ galaxies, the probability of observing a given cosmological model is given by
   $$
-  \mathcal{L}(\theta) = \frac{1}{\left( 2\pi \right)^{N/2} \, |R(\theta)|^{1/2}} \, \exp \left( -\frac{1}{2} {S_i}^T R_{ij}^{-1}(\theta) S_j  \right)
+  \mathcal{L}(\theta,\sigma_*) = \frac{1}{{(2\pi)}^{N/2}  \, {\det(\textbf{R}_{ij}(\textbf{r};\theta,\sigma_*))}^{1/2}} \, \exp \left( -\frac{1}{2} \textbf{S}_i^T \textbf{R}_{ij}^{-1} \textbf{S}_j  \right)
   $$
-  where $R_{ij}$ is the covariance matrix defined in @eq:covariance and $\theta$ is a model parameter that depends on the underlying cosmology.
+  where $\textbf{R}_{ij}$ is the covariance matrix defined in @eq:covariance and $\theta$ is a model parameter and $\sigma_*$ is a nuisance parameter that depends on the underlying cosmology.
 
-   
+- Bayes' theorem states that the joint likelihood $\mathcal{L}(\theta, \sigma_*)$ can be expressed as 
+  $$
+  \mathcal{L}(\theta, \sigma_*) = \mathcal{L}(\theta|\sigma_*) P(\sigma_*)
+  $$
 
+
+  where $\mathcal{L}(\theta|\sigma_*)$ is the conditional probability and $P(\sigma_*) = \text{const.}$ is a 'non-informative' prior.
+  $$
+  \mathcal{L(\sigma_*|\theta)} = \frac{\mathcal{L}(\theta|\sigma_*) P(\sigma_*)}{P(\theta)}
+  $$
   ​
+
+
+  
 
   ​
 

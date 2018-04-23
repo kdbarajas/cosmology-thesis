@@ -310,8 +310,11 @@ $$
     $$
     \left< S_i(\textbf{r}_i) S_j(\textbf{r}_j) \right>= \frac{H_0^2 f(\Omega_m)^2 a_\text{norm}}{2\pi^2} \int dk \, P(k) \, \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)
     $$
+<<<<<<< HEAD
     {#eq:correlation}
 
+=======
+>>>>>>> 16cdf531e9a4436de7f7b3fda08ab7057142b4b0
     where $P(k)$ is the power spectrum of the density field defined in @eq:densityps and @eq:velocityps and $\mathcal{W}(\textbf{r}_i, \textbf{r}_j, k)$ is the tensor window function calculated from galaxy position given by
     $$
     \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k) = \int \frac{d^2k}{4\pi} \, \exp(i \textbf{k} \cdot (\textbf{r}_i - \textbf{r}_j)) \, ( \hat{\textbf{r}}_i \cdot \hat{\textbf{k}}) \, ( \hat{\textbf{r}}_j \cdot \hat{\textbf{k}}) \,.
@@ -340,6 +343,7 @@ $$
   $$
   where $\textbf{R}_{ij}$ is the covariance matrix defined in @eq:covariance and $\theta$ is a model parameter and $\sigma_*$ is a nuisance parameter that depends on the underlying cosmology.
 
+<<<<<<< HEAD
 - Bayes' theorem states that the joint likelihood $\mathcal{L}(\theta, \sigma_*)$ can be expressed as 
   $$
   \mathcal{L}(\theta, \sigma_*) = \mathcal{L}(\theta|\sigma_*) P(\sigma_*)
@@ -395,6 +399,8 @@ $$
 
   ​
 
+=======
+>>>>>>> 16cdf531e9a4436de7f7b3fda08ab7057142b4b0
 
 
 

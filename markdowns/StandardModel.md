@@ -8,9 +8,9 @@ eqnos-plus-name: Eq.
 
 The Lambda Cold Dark Matter ($\Lambda\text{CDM}$) model of cosmology is the strongest model for describing the past and future of the Universe and is predicated on the fundamental assumptions of the Cosmological Principle: that the Universe on large scales is isotropic and homogeneous. The importance of this assumption cannot be understated as the metric that follows from the model provides the basis for our understanding of the evolution and growth of structure in the Universe. Within this framework, measurements from galaxy rotations, the cosmic microwave background radiation, Type Ia supernovae, and big bang nucleosynthesis strongly support the need for both dark matter and dark energy to describe a universe that adheres to the Cosmological Principle. And, while the model tells us about the density composition of the Universe it leaves much to be desired in our fundamental understanding of dark matter and dark energy, which together compose the vast majority of the known Universe. 
 
-We can investigate these mysterious phenomenon through peculiar velocity surveys which use galaxies as tracers of the underlying density field that is predominately formed by dark matter. Thus, by analyzing large scale motion in the local Universe we can test paradigms set forth by the $\Lambda\text{CDM}$ model in search of inconsistencies or deviations that may provide new insight into the inner workings of the Universe. 
+We can investigate these mysterious phenomenon through peculiar velocity and redshift surveys which use galaxies as tracers of the underlying density field that is predominately formed by dark matter. Thus, by analyzing large scale motion in the local Universe we can test paradigms set forth by the $\Lambda\text{CDM}$ model. Peculiar velocities thus serve as an interesting probe that may lead to new insight into the inner workings of the Universe, in particular where inconsistencies arise. One such instance is that of recent findings of large-scale bulk flows which may indicate an excess of structure formation on scales where the Universe is expected to be fairly uniform in contradiction with the standard model. Characterizing the strength of the density perturbations on large scales that may lead to an excess of power may provide insight into these findings.
 
-In the first section we provide the theoretical foundation of modern cosmology: Einstein's theory of general relativity, the FLRW metric, and the Friedmann equation for an evolving universe. 
+In the first section we provide the theoretical foundation of modern cosmology: Einstein's theory of general relativity, the FLRW metric, and the Friedmann equation for an evolving universe. In the second section we 
 
 ## General Relativity & Einstein's Field Equations
 
@@ -34,7 +34,7 @@ In the first section we provide the theoretical foundation of modern cosmology: 
     $$
     where $\Lambda$ represents the cosmological constant providing the best account for dark energy in the $\Lambda\text{CDM}$ model.
 
-## Friedmann-Lemaitre-Robertson-Walker Metric
+### Friedmann-Lemaitre-Robertson-Walker Metric
 
 - The FLRW metric for a homogeneous and isotropic Universe is given by
   $$
@@ -77,8 +77,8 @@ In the first section we provide the theoretical foundation of modern cosmology: 
 
   represents the time-dependent Hubble parameter. At present, $H$ is known as the Hubble constant $H_0$ and is defined by $H_0 \equiv \dot a_0 / a_0 = \dot a_0$ (normalized to $a_0 =1$ at present-time). In practice, the value of the Hubble constant is most usefully written as $H_0= 100\, h\,$\si{\km\per\s\per\Mpc} in terms of the dimensionless parameter $h$ defined by the current accepted value. 
 
-
   ### Cosmological Redshift
+
 
 - In practice, the only meaningful way in which we can measure the cosmological expansion velocity is by measuring the redshift. We can relate the cosmological redshift from @eq:redshift to the scale factor $a$ of the Universe by
   $$
@@ -94,8 +94,8 @@ In the first section we provide the theoretical foundation of modern cosmology: 
      $$
      where $cz_\text{cos} \approx H_0 d$ is the approximate expansion velocity at present-time for $z \ll 1$.
 
+     ### Friedmann Equation for an Evolving Universe
 
-### Friedmann Equation for an Evolving Universe
 
 - Solving the EFEs using the FLRW metric provides the Friedman equation that model the time-evolution of a homogeneous and isotropic Universe:
   $$
@@ -142,7 +142,7 @@ In the first section we provide the theoretical foundation of modern cosmology: 
   $$
   is the cosmological equation of motion that describes the evolution of the Universe based on the current expansion rate $H_0$, the individual mass-energy densities $\Omega_i$, and the spatial curvature $K$.
 
-### Gravitational Instability and the Growth of Structure
+## Gravitational Instability and the Growth of Structure
 
 - While the Universe on very large scales is both isotropic and homogeneous, the tiny temperature fluctuations seen in the cosmic microwave background reflect the dawn of structure formation in the early Universe.
 
@@ -337,72 +337,56 @@ $$
 
   ### Maximum Likelihood Estimate
 
-- Given the line-of-sight peculiar velocity vector $\textbf{S}_i= S_i(\textbf{r}_i)\cdot \hat{\textbf{r}}_i$ for a given observational dataset of $N$ galaxies, the probability of observing a given cosmological model is given by
+- Given the line-of-sight peculiar velocity vector $\pmb{S}= (S_i, \ldots, S_N)$ for a given observational dataset of $N$ galaxies, the probability of observing a given cosmological model is given by
   $$
-  \mathcal{L}(\theta,\sigma_*) = \frac{1}{{(2\pi)}^{N/2}  \, {\det(\textbf{R}_{ij}(\textbf{r};\theta,\sigma_*))}^{1/2}} \, \exp \left( -\frac{1}{2} \textbf{S}_i^T \textbf{R}_{ij}^{-1} \textbf{S}_j  \right)
+  \mathcal{L}(\pmb{\theta}  \,| \,  \pmb{S}) = \frac{1}{{(2\pi)}^{N/2}  \, {\det(\textbf{R}(\textbf{r};\pmb{\theta}))}^{1/2}} \, \exp \left( -\frac{1}{2} \pmb{S}^T \textbf{R}^{-1} \pmb{S}  \right)
   $$
-  where $\textbf{R}_{ij}$ is the covariance matrix defined in @eq:covariance and $\theta$ is a model parameter and $\sigma_*$ is a nuisance parameter that depends on the underlying cosmology.
+  {#eq:likelihood}
+
+  where $\textbf{R}(\textbf{r};\pmb{\theta})$ is an $N \times N$ covariance matrix defined in @eq:covariance and the model parameter(s) $\pmb{\theta} =(\theta_i, \ldots, \theta_n)$  depend on the underlying cosmology. In Bayesian statistics, any information about the model parameter of interest $\theta_i$ is constrained by the likelihood where the maximum likelihood value corresponds to the parameter value that best supports the data. 
 
 
-- Bayes' theorem states that the joint likelihood $\mathcal{L}(\theta, \sigma_*)$ can be expressed as 
+- Bayes' theorem states the posterior distribution, $p(\pmb{\theta} \, | \, \pmb{S})$, the conditional probability distribution a multi-parameter model given the data, can be expressed as
   $$
-  \mathcal{L}(\theta, \sigma_*) = \mathcal{L}(\theta|\sigma_*) P(\sigma_*)
+  p(\pmb{\theta} \, | \, \pmb{S}) 
+  = \frac{p(\pmb{\theta}) \, p(\pmb{S} \, | \, \pmb{\theta})}{\int p(\pmb{\theta}) \, p(\pmb{S} \, | \, \pmb{\theta}) \, d\pmb{\theta}_{-i}}
+  = \frac{p(\pmb{\theta}) \mathcal{L}(\pmb{\theta}  \,| \,  \pmb{S})}{p( \pmb{S} \, | \, \theta_i )}
+  \propto p(\pmb{\theta}) \mathcal{L}(\pmb{\theta}  \,| \,  \pmb{S})
   $$
+  where the expression is equal when a normalization constant is included in the right-most term and we have used the fact that $\mathcal{L}(\pmb{\theta}  \,| \,  \pmb{S}) \equiv p(\pmb{S} \, | \, \pmb{\theta})$ to relate Bayes' theorem to @eq:likelihood.
 
-
-
-  where $\mathcal{L}(\theta|\sigma_*)$ is the conditional probability and $P(\sigma_*) = \text{const.}$ is a 'non-informative' prior.
-$$
-  \mathcal{L(\sigma_*|\theta)} = \frac{\mathcal{L}(\theta|\sigma_*) P(\sigma_*)}{P(\theta)}
-$$
-  ​
-
-
-
-
-  ​
-
-  ​
-
-  ​
-
-  ​
-
-
-
-
-
-
-
-
-
-
-​
-
-​
-
-​
-
-### For next section on cosmology
-
-​
-$$
-
-$$
-
-
-
-
-
-- $$
-  1 + z = (1 + z_\text{cos})(1 + v_{pec}/c)
+- If we assume the standard 'non-informative' prior $p(\pmb{\theta}) = \text{const.}$, then the marginal posterior distribution of $\theta_i$ is given by
   $$
+  p(\pmb{S} \, | \, \theta_i) \equiv \mathcal{L}(\theta_i \, | \, \pmb{S}) \propto \int_{-\infty}^\infty \mathcal{L}(\pmb{\theta} \, | \, \textbf{S}) \, d\pmb{\theta}_{-i}
+  $$
+  {#eq:marginalization}
 
-  ​
+  where we have marginalized over nuisance parameter(s) giving us the likelihood of our model parameter of interest given the data.
 
-=======
->>>>>>> 16cdf531e9a4436de7f7b3fda08ab7057142b4b0
+- Even so, the marginal likelihood can rarely be calculated numerically but if $\mathcal{L}(\pmb{\theta} \, | \, \pmb{S})$ is Gaussian we can then calculate @eq:marginalization analytically using the definition of the Gaussian integral where
+  $$
+  \int_{-\infty}^\infty \mathcal{L}(\pmb{\theta} \, | \, \textbf{S}) \, d\pmb{\theta}_{-i} \equiv \int_{-\infty}^{\infty} A_x \, \exp \left( - \frac{(x-x_0)^2}{2 \sigma_x^2}   \right) dx = A_x \sqrt{2\pi \sigma_x^2}
+  $$
+  {#eq:gaussianintegral}
 
+- The likelihood analysis is limited by the computationally intensive calculation of the inverse covariance matrix $\textbf{R}^{-1}$ and the limit of the exponential term as it approaches negative infinity for very large numbers. We can simplify the problem by working in terms of the loglikelihood, which can easily handle very large numbers, where we can express @eq:likelihood as
+  $$
+  \log\mathcal{L}(\pmb{\theta} \, | \, \pmb{S}) \propto -\frac{1}{2} \left( \pmb{S}^T \textbf{R}^{-1} \pmb{S} + \text{logdet}(\textbf{R})  \right)
+  $$
+  {#eq:loglike}
 
+  where the expression is equal with the addition of a constant to the right-side that depends on the size $N$ of the dataset. We can then analytically calculate the log of the marginal probability distribution of $\theta_i$ by using both @eq:gaussianintegral and @eq:loglike to simplify our calculation such that
+  $$
+  \begin{split}
+  \log \mathcal{L}(\theta_i \, | \, \textbf{S}) & \propto \log \left( \int_{-\infty}^\infty \mathcal{L}(\pmb{\theta} \, | \, \textbf{S}) \, d\pmb{\theta}_{-i} \right)
+  \propto \log \left( \int_{-\infty}^\infty \exp \left( \log\mathcal{L}(\pmb{\theta} \, | \, \textbf{S}) - \log\mathcal{L}(\theta_i, \pmb{\hat\theta}_{-i} \, | \, \textbf{S})  \right) \, d\pmb{\theta}_{-i} \right) \\
+  & = \log(A_{-i}) + \frac{1}{2}\log \left(2\pi\sigma_{-i}^2 \, \right)
+  \end{split}
+  $$
+  where $\pmb{\hat{\theta}}_{-i}$ is the maximum likelihood estimate for the nuisance parameter(s) $\pmb{\theta}_{-i}$ equivalent to $x_0$ in @eq:gaussianintegral with $A_{-i}$ and $\sigma_{-i}^2$  being the amplitude and variance of the Gaussian distribution about $\pmb{\hat{\theta}}_{-i}$.
 
-
+- Finally, the maximum likelihood estimate (MLE) $\pmb{\hat{\theta}}_i$ of our parameter of interest $\theta_i$ is given by 
+  $$
+  \pmb{\hat{\theta}}_i = \text{arg max } \mathcal{L} (\theta_i \, | \, \pmb{S}) = \text{arg max } \log\mathcal{L}(\theta_i \, | \, \pmb{S}) \, .
+  $$
+  which allows us to freely work with the likelihood or loglikelihood depending on which is most convenient.

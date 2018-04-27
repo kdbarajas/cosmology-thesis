@@ -90,6 +90,8 @@ $$
   $$
 
 
+
+
 ### Velocity Covariance Matrix
 
 - If we had a full 3D view of the velocity field we could make a straightforward measurement of the velocity correlation between galaxies, however we are observationally limited to the 1D radial component of the peculiar velocity. We use a theoretical velocity covariance matrix developed by Kaiser (1988) to characterize the growth of structure on large scales from perturbations in the matter distribution.
@@ -140,6 +142,8 @@ $$
   $$
   \sigma_{v,i}^2 = \frac{1}{3}\frac{H_0^2 f(\Omega_m)^2 a_\text{norm}}{2\pi^2} \int dk \, P(k) \, .
   $$
+
+
 
 
 

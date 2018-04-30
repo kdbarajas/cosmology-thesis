@@ -67,7 +67,7 @@ $$
   $$
   q = \frac{k}{[h \ \text{Mpc}^{-1}]} \cdot \left( \frac{\vartheta_{2.7}^2}{\Gamma} \right) \,.
   $$
-  with the CMB temperature given by $T_\text{CMB} = 2.7\vartheta_{2.7}$\si{\kelvin} and we use the shape parameter $\Gamma = \Omega_m h$ in the zero-baryon limit. However, the baryonic density is non-negligible and so a more accurate fit that takes into account the effects of baryonic oscillations is given by
+  with the CMB temperature given by $T_\text{CMB} = 2.7\vartheta_{2.7}$\si{\kelvin} and we use the shape parameter $\Gamma$ which in the zero-baryon limit (i.e. at large scales) can be approximated by  $\Gamma = \Omega_m h$. However, the baryonic density is non-negligible at the scales that we probe and so a more accurate fit that takes into account the effects of baryonic oscillations is given by
   $$
   \Gamma_\text{eff}(k) = \Omega_m h \left[ \alpha_\Gamma + \frac{1- \alpha_\Gamma}{1 + (0.43ks)^4} \right]
   $$
@@ -124,7 +124,7 @@ $$
   $$
   {#:eq:covariance}
 
-  - where the noise term $\Sigma_{i}^2 = \sigma_{\text{obs},i}^2 + \sigma_{*,i}^2$ represents the sum of the observational uncertainties $\sigma_{\text{obs},i}$ and the 1D velocity dispersion term $\sigma_{*,i}$ that account for non-linear small-scale motions.
+  - where the noise term $\Sigma_{i}^2 = \sigma_{\text{obs},i}^2 + \sigma_{*,i}^2$ represents the sum of the observational uncertainties $\sigma_{\text{obs},i}$ and the 1D velocity dispersion term $\sigma_{*,i}$ that accounts for non-linear small-scale motions.
 
   - $\left< S_i S_j  \right>$ depends on the model and the relative position between galaxies $i$ and $j$ such that
     $$
@@ -156,8 +156,6 @@ $$
 
 
 
-
-
 ### Maximum Likelihood Estimate
 
 - Given the line-of-sight peculiar velocity vector $\pmb{S}= (S_i, \ldots, S_N)$ for a given observational dataset of $N$ galaxies, the probability of observing a given cosmological model is given by
@@ -180,7 +178,7 @@ $$
 
 - If we assume the standard 'non-informative' prior (i.e $p(\pmb{\theta}) = \text{const.}$), then the marginal posterior distribution of $\theta_i$ is given by
   $$
-  p(\pmb{S} \, | \, \vartheta) \equiv \mathcal{L}(\vartheta \, | \, \pmb{S}) \propto \int_{-\infty}^\infty \mathcal{L}(\pmb{\theta} \, | \, \textbf{S}) \, d\theta_n
+   \mathcal{L}(\vartheta \, | \, \pmb{S}) \equiv p(\pmb{S} \, | \, \vartheta) \propto \int_{-\infty}^\infty \mathcal{L}(\pmb{\theta} \, | \, \textbf{S}) \, d\theta_n
   $$
   {#eq:marginalization}
 

@@ -156,6 +156,7 @@ $$
 
 
 
+
 ### Maximum Likelihood Estimate
 
 - Given the line-of-sight peculiar velocity vector $\pmb{S}= (S_i, \ldots, S_N)$ for a given observational dataset of $N$ galaxies, the probability of observing a given cosmological model is given by
@@ -167,7 +168,7 @@ $$
   where $\textbf{R}(\textbf{r};\pmb{\theta})$ is an $N \times N$ covariance matrix defined in @eq:covariance and the model parameters $\pmb{\theta} =(\vartheta, \theta_n)$ depend on the underlying cosmology. In Bayesian statistics, any information about the model parameter(s) of interest $\vartheta = (\theta_i, \ldots, \theta_m)$ is constrained by the likelihood where the maximum likelihood value corresponds to the parameter value that best supports the data. The nuisance parameter $\theta_n$ often represents a parameter that must be included in the model but is of little to no interest to our analysis.
 
 
-- Bayes' theorem states the posterior distribution, $p(\pmb{\theta} \, | \, \pmb{S})$, the conditional probability distribution a multi-parameter model given the data, can be expressed as
+- Bayes' theorem states the posterior distribution, $p(\pmb{\theta} \, | \, \pmb{S})$, the conditional probability distribution of a multi-parameter model given the data, can be expressed as
   $$
   p(\pmb{\theta} \, | \, \pmb{S}) 
   = \frac{p(\pmb{\theta}) \, p(\pmb{S} \, | \, \pmb{\theta})}{\int p(\pmb{\theta}) \, p(\pmb{S} \, | \, \pmb{\theta}) \, d\theta_n}

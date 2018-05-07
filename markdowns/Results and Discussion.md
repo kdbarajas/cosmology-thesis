@@ -22,7 +22,11 @@ eqnos-plus-name: Eq.
 
     ![powerspectrum_Ob](/home/kdbarajas/GitHub/cosmology-thesis/images/powerspectrum_Ob.png)
 
-  - Within our methodology, the only dependence on $\Omega_b$ is within the parameterization of the shape parameter $\Gamma_\text{eff}$ in the power spectrum. The other two parameters that most strongly influence the shape and amplitude of the power spectrum are $\Omega_m$ and $\sigma_8$, so we chose to compare the constraints on the combination of $\Omega_b$ with $\Omega_m$ and then separately with $\sigma_8$. In Figure #, we present our constraints on the combinations of these parameters where we vary $\Omega_b$ with one parameter while fixing the other. In both cases the 1D marginalized maximum likelihood estimate of $\Omega_b$ marginalized over the second parameter measures a value inconsistent with $\Lambda\text{CDM}$. However, the secondary parameters of $\Omega_m$ and $\sigma_8$ when marginalized over $\Omega_b$ where strongly constrained to within $1\sigma$ of the expected values. This suggests that the individual MLE values where we independently varied a single parameter (as listed in Table #) were strongly influenced by the _Planck_ value of $\Omega_b$ that is much smaller than the values we have constrained. Given that MLE of $\Omega_m$ and $\sigma_8$ marginalized over $\Omega_b$ were consistent with the $\Lambda\text{CDM}$ we find it interesting to that the CF3 group data favors more power on large scale through a larger value of $\Omega_b$ and so we found it worth exploring further.
+<<<<<<< HEAD
+  - Within our methodology, the only dependence on $\Omega_b$ is within the parameterization of the shape parameter $\Gamma_\text{eff}$ in the power spectrum. The other two parameters that most strongly influence the shape and amplitude of the power spectrum are $\Omega_m$ and $\sigma_8$, so we chose to compare the constraints on the combination of $\Omega_b$ with $\Omega_m$ and then with $\sigma_8$. In Figure #, we present our constraints on the combinations of these parameters where we vary $\Omega_b$ with one parameter while fixing the other. In both cases the 1D marginalized maximum likelihood estimate of $\Omega_b$ marginalized over the second parameter measures a value inconsistent with $\Lambda\text{CDM}$. However, the secondary parameters of $\Omega_m$ and $\sigma_8$ when marginalized over $\Omega_b$ where strongly constrained to within $1\sigma$ of the expected values. This suggests that the individual MLE listed in Table # where we varied a single parameter were strongly influenced by the _Planck_ value of $\Omega_b$ that is much smaller than the values we have constrained. Given that MLE of $\Omega_m$ and $\sigma_8$ marginalized over $\Omega_b$ were consistent with the $\Lambda\text{CDM}$ we find it interesting to that the CF3 group data favors more power on large scale through a larger value of $\Omega_b$ and so we found it worth exploring further.
+=======
+  - Within our methodology, the only dependence on $\Omega_b$ is within the parameterization of the shape parameter $\Gamma_\text{eff}$ in the power spectrum. The other two parameters that most strongly influence the shape and amplitude of the power spectrum are $\Omega_m$ and $\sigma_8$, so we chose to compare the constraints on the combination of $\Omega_b$ with $\Omega_m$ and then separately with $\sigma_8$. In Figure #, we present our constraints on the combinations of these parameters where we vary $\Omega_b$ with one parameter while fixing the other. In both cases the 1D marginalized maximum likelihood estimate of $\Omega_b$ marginalized over the second parameter measures a value inconsistent with $\Lambda\text{CDM}$. However, the secondary parameters of $\Omega_m$ and $\sigma_8$ when marginalized over $\Omega_b$ where strongly constrained to within $1\sigma$ of the expected values. This suggests that the individual MLE values where we independently varied a single parameter (as listed in Table #) were strongly influenced by the _Planck_ value of $\Omega_b$ that is much smaller than the values we have constrained. Given that MLE of $\Omega_m$ and $\sigma_8$ marginalized over $\Omega_b$ were consistent with $\Lambda\text{CDM}$ we find it interesting to that the CF3 group data favors more power on large scale through a larger value of $\Omega_b$ and so we found it worth exploring further.
+>>>>>>> 4624b585b4f3cd79b25aa23e2b2e94f85e0fda8a
 
     ![ml_OmOb_standard](../images/ml_OmOb_standard.png)
 
@@ -31,7 +35,7 @@ eqnos-plus-name: Eq.
 
   ## Adding power on large-scales
 
-  - Explain probing strength of density perturbations by scaling the power spectrum using the piecewise equation
+  - We probe adding power on linear scales to mimic the effect of a large $\Omega_b$ value by introducing a scaling factor $X$ into the parameterization of the power spectrum,
     $$
     P(k) \propto k^{n_s} \, T^2(k)
     \begin{cases}
@@ -39,6 +43,8 @@ eqnos-plus-name: Eq.
     1 & \text{for } k > k_\text{scale}
     \end{cases}
     $$
+    where $k_\text{scale}$ is the $k$-value for which we extend the scaling effect over as demonstrated in Fig #.
+
     ![powerscaling_example](/home/kdbarajas/GitHub/cosmology-thesis/images/powerscaling_example.png)
 
   - Two dominant peaks. First at very large scales ~500 h-1 Mpc and second at 80 h-1 Mpc. 

@@ -8,11 +8,11 @@ eqnos-plus-name: Eq.
 
 - The Cosmicflows-3 (CF3) database is a compilation of combined redshift and distance surveys of the local Universe and is an extension of the previous releases, Cosmicflows and Cosmicflows-2.  Important additions relevant to our work include improvement of distance measurements from the Tully-Fisher relationship using the _Spitzer Space Telescope_ and the inclusion of Fundamental Plane distance measurements from the Six Degree Field Galaxy Survey (6dFGS). Combining the various distance surveys with redshift measurements from the 2MASS Redshift Survey (2MRS) results in a database of 17,669 individual galaxies with both distance and redshift measurements. Figure # shows the projection of the CF3  individual galaxy distances onto the supergalactic plane with positions in supergalactic coordinates given in megaparsecs.
 
-- ![img](file:///home/kdbarajas/GitHub/cosmology-thesis/images/CF3.png?lastModify=1524706206)
+- ![img](file:///home/kdbarajas/Git/cosmology-thesis/images/CF3.png?lastModify=1524706206)
 
 - To reduce the uncertainty in the distance and redshift measurements, Tully et. al (2015) uses a method of grouping galaxies based on distances and positions in the night sky in which an average group value is calculated. The group catalog is organized into 'nests' based on the 2MRS survey that may be as small as a single galaxy but are averaged over two or more distance measurements. Also included are individual galaxies that aren't associated with a nest within the 2MRS and are thus are given the label 'singles'. The database provides 11,508 groups organized organized into 1,704 nests comprised of 7,865 individual galaxies and 9,804 singles which is a significant improvement to its predecessor \textit{Cosmicflows-2} which contained only 8,188 individual galaxy entries in total \cite{Tully2013:cf2}. Fig # shows the redshift distribution of the CF3 group catalog which extends to $z \sim 0.1$ with a median redshift of $0.029$.
 
-  ![histogram_redshift](/home/kdbarajas/GitHub/cosmology-thesis/images/histogram_redshift.png)
+  ![histogram_redshift](/home/kdbarajas/Git/cosmology-thesis/images/histogram_redshift.png)
 
 # Peculiar Velocity Statistics & Models
 
@@ -38,7 +38,7 @@ $$
 z_\text{mod} = z_\text{obs} \, [ 1 + 0.5 (1 - q_0)\, z_\text{obs}  - (1/6) (1 - q_0 - 3 q_0^2 +1)\, z_\text{obs} ^2] \, .
 $$
 
-​	We can then rewrite @eq:pecvelo as
+	We can then rewrite @eq:pecvelo as
 $$
 v_p \equiv \textbf{v} \cdot \hat{\textbf{r}} = c \left ( \frac{z_\text{mod} - z_\text{cos}}{1 + z_\text{cos}}  \right) \simeq c \left ( \frac{z_\text{mod} - z_\text{cos}}{1 + z_\text{mod}}  \right)
 $$
@@ -138,7 +138,7 @@ $$
 \mathcal{W}(\textbf{r}_i, \textbf{r}_j, k) = \int \frac{d^2k}{4\pi} \, \exp(i \textbf{k} \cdot (\textbf{r}_i - \textbf{r}_j)) \, ( \hat{\textbf{r}}_i \cdot \hat{\textbf{k}}) \, ( \hat{\textbf{r}}_j \cdot \hat{\textbf{k}}) \,.
 $$
 
-​		{#eq:tensorwindow}
+		{#eq:tensorwindow}
 
 - Ma et al. (2011) provides an analytical form of @eq:tensorwindow that transforms the tensor window function using spherical harmonics such that
   $$
@@ -152,6 +152,8 @@ $$
   $$
   \sigma_{v,i}^2 = \frac{1}{3}\frac{H_0^2 f(\Omega_m)^2 a_\text{norm}}{2\pi^2} \int dk \, P(k) \, .
   $$
+
+
 
 
 

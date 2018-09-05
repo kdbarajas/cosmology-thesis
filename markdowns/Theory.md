@@ -6,9 +6,7 @@ eqnos-plus-name: Eq.
 
 # The Cosmicflows-3 Database
 
-- The Cosmicflows-3 (CF3) database is a compilation of combined redshift and distance surveys of the local Universe and is an extension of the previous releases, Cosmicflows and Cosmicflows-2.  Important additions relevant to our work include improvement of distance measurements from the Tully-Fisher relationship using the _Spitzer Space Telescope_ and the inclusion of Fundamental Plane distance measurements from the Six Degree Field Galaxy Survey (6dFGS). Combining the various distance surveys with redshift measurements from the 2MASS Redshift Survey (2MRS) results in a database of 17,669 individual galaxies with both distance and redshift measurements. Figure # shows the projection of the CF3  individual galaxy distances onto the supergalactic plane with positions in supergalactic coordinates given in megaparsecs.
-
-- ![img](file:///home/kdbarajas/Git/cosmology-thesis/images/CF3.png?lastModify=1524706206)
+- The Cosmicflows-3 (CF3) database is a compilation of combined redshift and distance surveys of the local Universe and is an extension of the previous releases, Cosmicflows and Cosmicflows-2.  Important additions relevant to our work include improvement of distance measurements from the Tully-Fisher relationship using the _Spitzer Space Telescope_ and the inclusion of Fundamental Plane distance measurements from the Six Degree Field Galaxy Survey (6dFGS). Combining the various distance surveys with redshift measurements from the 2MASS Redshift Survey (2MRS) results in a database of 17,669 individual galaxies with both distance and redshift measurements. Figure # shows the projection of the CF3  individual galaxy distances onto the supergalactic plane with positions in supergalactic coordinates given in megaparsecs.![img](file:///home/kdbarajas/Git/cosmology-thesis/images/CF3.png?lastModify=1524706206)
 
 - To reduce the uncertainty in the distance and redshift measurements, Tully et. al (2015) uses a method of grouping galaxies based on distances and positions in the night sky in which an average group value is calculated. The group catalog is organized into 'nests' based on the 2MRS survey that may be as small as a single galaxy but are averaged over two or more distance measurements. Also included are individual galaxies that aren't associated with a nest within the 2MRS and are thus are given the label 'singles'. The database provides 11,508 groups organized organized into 1,704 nests comprised of 7,865 individual galaxies and 9,804 singles which is a significant improvement to its predecessor \textit{Cosmicflows-2} which contained only 8,188 individual galaxy entries in total \cite{Tully2013:cf2}. Fig # shows the redshift distribution of the CF3 group catalog which extends to $z \sim 0.1$ with a median redshift of $0.029$.
 
@@ -16,7 +14,7 @@ eqnos-plus-name: Eq.
 
 # Peculiar Velocity Statistics & Models
 
-##Gaussian Peculiar Velocity Estimator
+## Gaussian Peculiar Velocity Estimator
 
 - From Sec # we can move towards a more accurate estimates of peculiar  velocities. An important limitation on Hubble's law from @eq:hubblelaw is that the relative velocity must be much less than the speed of light. In the low-velocity limit, the relative velocity can be approximated by the sum of the cosmological expansion velocity $H_0\, r$ and the peculiar velocity $v_p$. However, redshift is not an additive property as we previously assumed and thus the observed redshift $z_\text{obs}$ is actually given by
 
@@ -38,7 +36,8 @@ $$
 z_\text{mod} = z_\text{obs} \, [ 1 + 0.5 (1 - q_0)\, z_\text{obs}  - (1/6) (1 - q_0 - 3 q_0^2 +1)\, z_\text{obs} ^2] \, .
 $$
 
-	We can then rewrite @eq:pecvelo as
+- We can then rewrite @eq:pecvelo as
+
 $$
 v_p \equiv \textbf{v} \cdot \hat{\textbf{r}} = c \left ( \frac{z_\text{mod} - z_\text{cos}}{1 + z_\text{cos}}  \right) \simeq c \left ( \frac{z_\text{mod} - z_\text{cos}}{1 + z_\text{mod}}  \right)
 $$
@@ -99,7 +98,7 @@ $$
 
 - The normalized power spectrum generated using the parameterization provided by Eisenstein & Hu (1998), @eq:norm, and the parameter values from Planck Collaboration et al. (2014) is shown in Fig#.
 
-  ![powerspectrum](/home/kdbarajas/GitHub/cosmology-thesis/images/powerspectrum.png)
+  ![powerspectrum](/home/kdbarajas/Git/cosmology-thesis/images/powerspectrum.png) 
 
 
 ### Velocity Covariance Matrix
@@ -112,7 +111,7 @@ $$
   S_i (\textbf{r}_0) = \textbf{v}(\textbf{r}_0 + \textbf{r}_i) \cdot \hat{\textbf{r}}_i = \int d^3 k \ \hat{\textbf{k}} \cdot \hat{\textbf{r}}_i \, v(\textbf{k}) \, \exp [ i \textbf{k} \cdot (\textbf{r}_0 + \textbf{r}_i) ]
   $$
 
-  - where we have adopted the standard notation $S_i$ to represent the velocity data and $\textbf{r}_0$ is the relative position from which measurements of a galaxy's distance at $\textbf{r}_i$ are made.
+  where we have adopted the standard notation $S_i$ to represent the velocity data and $\textbf{r}_0$ is the relative position from which measurements of a galaxy's distance at $\textbf{r}_i$ are made.
 
 
 - The covariance matrix is given by
@@ -124,7 +123,7 @@ $$
   $$
   {#:eq:covariance}
 
-  - where the noise term $\Sigma_{i}^2 = \sigma_{\text{obs},i}^2 + \sigma_{*,i}^2$ represents the sum of the observational uncertainties $\sigma_{\text{obs},i}$ and the 1D velocity dispersion term $\sigma_{*,i}$ that accounts for non-linear small-scale motions.
+  where the noise term $\Sigma_{i}^2 = \sigma_{\text{obs},i}^2 + \sigma_{*,i}^2$ represents the sum of the observational uncertainties $\sigma_{\text{obs},i}$ and the 1D velocity dispersion term $\sigma_{*,i}$ that accounts for non-linear small-scale motions.
 
   - $\left< S_i S_j  \right>$ depends on the model and the relative position between galaxies $i$ and $j$ such that
     $$
@@ -152,8 +151,6 @@ $$
   $$
   \sigma_{v,i}^2 = \frac{1}{3}\frac{H_0^2 f(\Omega_m)^2 a_\text{norm}}{2\pi^2} \int dk \, P(k) \, .
   $$
-
-
 
 
 
@@ -218,5 +215,3 @@ $$
   which allows us to freely work with the likelihood in @eq:likelihood or the loglikelihood in @eq:loglike depending on which is most convenient.
 
 - Given the velocity data from the CF3 group catalog we can run a likelihood analysis over the parameterization of the power spectrum and the covariance matrix by varying cosmological parameters.
-
-## 
